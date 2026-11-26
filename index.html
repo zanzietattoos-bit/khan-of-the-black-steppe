@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE KHAN OF THE BLACK STEPPE — CHIMERA</title>
+<meta name="description" content="Ten tracks narrated by the man who ordered them forgotten. Hold the button, warm the engine, ride.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#0c0907">
+<link rel="canonical" href="https://zanzietattoos-bit.github.io/khan-of-the-black-steppe/">
+<meta property="og:type" content="music.album">
+<meta property="og:site_name" content="THE KHAN OF THE BLACK STEPPE">
+<meta property="og:title" content="THE KHAN OF THE BLACK STEPPE">
+<meta property="og:description" content="Ten tracks narrated by the man who ordered them forgotten. Hold the button, warm the engine, ride.">
+<meta property="og:url" content="https://zanzietattoos-bit.github.io/khan-of-the-black-steppe/">
+<meta property="og:image" content="https://zanzietattoos-bit.github.io/khan-of-the-black-steppe/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Armoured engine-horses riding under an eclipse across a cracked steppe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THE KHAN OF THE BLACK STEPPE">
+<meta name="twitter:description" content="Ten tracks narrated by the man who ordered them forgotten. Hold the button, warm the engine, ride.">
+<meta name="twitter:image" content="https://zanzietattoos-bit.github.io/khan-of-the-black-steppe/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230c0907'/%3E%3Ccircle cx='16' cy='10' r='5' fill='%23ff7a1a'/%3E%3Crect x='15' y='14' width='2' height='16' fill='%23eadfc4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+/* Design plan
+   Direction: a war-rig dashboard bolted over a living steppe. Welded plates, hazard stripes, one oversized tach.
+   Colour: ash (ground), plate (panels), rust and ember (heat), hazard (warnings), bone (type), glass (lightning only).
+   Type: Anton for every shout (title, lyrics), Special Elite for plates, captions and the brief.
+   Layout: one column of riveted plates over a fixed canvas. The stage is the loud part; everything else is quiet metal. */
+:root{
+  --ash:#0c0907; --plate:#2c2520; --plate2:#3a312a; --rust:#b6471a; --ember:#ff7a1a;
+  --hazard:#ffc21a; --bone:#eadfc4; --blood:#7a140b; --glass:#7ff6ff;
+  --display:"Anton","Impact","Haettenschweiler","Arial Narrow Bold",sans-serif;
+  --body:"Special Elite","Courier New",Courier,monospace;
+  --stripe:repeating-linear-gradient(-45deg,var(--hazard) 0 12px,#14100d 12px 24px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html,body{margin:0;min-height:100%;background:var(--ash);color:var(--bone);font-family:var(--body);font-size:15px;line-height:1.45}
+body{overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--hazard);outline-offset:2px}
+#world{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+.veil{position:fixed;inset:0;z-index:5;pointer-events:none;background:radial-gradient(ellipse at 50% 40%,transparent 35%,rgba(0,0,0,.72) 100%)}
+.grain{position:fixed;inset:-60px;z-index:90;pointer-events:none;opacity:.12;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain .9s steps(5) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-18px,12px)}40%{transform:translate(14px,-22px)}60%{transform:translate(-26px,-8px)}80%{transform:translate(20px,24px)}100%{transform:translate(0,0)}}
+
+.rig{position:relative;z-index:10;max-width:960px;margin:0 auto;padding:14px 14px 150px;display:flex;flex-direction:column;gap:18px}
+.plate{position:relative;padding:16px;border:2px solid #0e0a08;
+  background:
+   radial-gradient(circle at 9px 9px,#8a7766 0 2.5px,#1a1410 3px 4px,transparent 4.5px),
+   radial-gradient(circle at calc(100% - 9px) 9px,#8a7766 0 2.5px,#1a1410 3px 4px,transparent 4.5px),
+   radial-gradient(circle at 9px calc(100% - 9px),#8a7766 0 2.5px,#1a1410 3px 4px,transparent 4.5px),
+   radial-gradient(circle at calc(100% - 9px) calc(100% - 9px),#8a7766 0 2.5px,#1a1410 3px 4px,transparent 4.5px),
+   linear-gradient(170deg,var(--plate2),var(--plate) 55%,#231d19);
+  box-shadow:inset 0 0 0 2px #4a3f36,inset 0 0 40px #0008,0 14px 36px #000b}
+.stripe{height:14px;background:var(--stripe);margin:-6px -6px 14px;border:2px solid #0e0a08}
+
+/* title */
+.headrow{display:flex;gap:16px;align-items:flex-start}
+.tug{flex:0 0 auto;width:clamp(54px,14vw,96px);height:auto;overflow:visible}
+.tug .tails{transform-origin:45px 30px;animation:sway 3.2s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(4deg)}}
+h1{margin:0;font-family:var(--display);font-weight:400;line-height:.88;text-transform:uppercase;filter:url(#rough);color:var(--bone);text-shadow:0 3px 0 #000,0 0 28px rgba(255,122,26,.35)}
+h1 .a{display:block;font-size:clamp(46px,13.5vw,150px);letter-spacing:.01em}
+h1 .b{display:block;font-size:clamp(21px,6.3vw,64px);color:var(--hazard);letter-spacing:.04em;margin-top:6px}
+.sub{margin:12px 0 0;max-width:46ch;color:#cdbf9f}
+@media (max-width:600px){.sub{font-size:13px;line-height:1.35}.plate{padding:14px}.reel{padding-right:64px!important}}
+.cover{display:block;width:100%;max-height:420px;object-fit:cover;margin-top:14px;border:2px solid #0e0a08}
+
+/* stage */
+.stage{position:relative;min-height:min(66vh,600px);min-height:min(66svh,600px);overflow:hidden;border:2px solid #0e0a08;box-shadow:0 0 0 3px var(--plate2),0 18px 40px #000c;background:transparent;isolation:isolate}
+.stage>*{position:absolute}
+.sbg{inset:0}
+.sbg canvas,.sbg img,.sbg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sbg img#stImg{animation:kb 26s ease-in-out infinite alternate}
+.sbg img.khan{inset:auto -3% 0 auto;width:auto;height:84%;opacity:.5;mix-blend-mode:lighten;object-fit:contain}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.shade{inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6) 0,rgba(0,0,0,.05) 26%,rgba(0,0,0,.25) 46%,rgba(0,0,0,.9) 100%)}
+.crack{right:0;top:0;width:52%;height:52%;pointer-events:none;opacity:.5;mix-blend-mode:screen}
+.hud{left:0;right:0;top:0;display:flex;justify-content:space-between;gap:10px;padding:10px 12px;font-size:12px}
+.hud span{background:rgba(10,7,5,.78);padding:3px 8px;border:1px solid #4a3f36}
+#secLabel{max-width:64%}
+.reel{left:0;right:0;bottom:0;padding:14px 16px 22px;display:flex;flex-direction:column;gap:7px;text-align:left}
+.ln{font-family:var(--display);text-transform:uppercase;line-height:1.03;margin:0;overflow-wrap:anywhere;transition:opacity .5s,color .5s,filter .6s}
+.ln.cur{font-size:clamp(30px,8vw,66px);color:var(--bone);text-shadow:0 2px 0 #000,0 0 22px rgba(255,122,26,.45)}
+.ln.p1,.ln.p2,.ln.n1,.ln.n2{font-size:clamp(15px,3.6vw,24px)}
+.ln.p2{opacity:.16;color:#5a4637;filter:blur(1.2px);text-shadow:0 3px 8px var(--ember)}
+.ln.p1{opacity:.42;color:#9b7a5f;filter:blur(.5px);text-shadow:0 2px 6px rgba(255,122,26,.6)}
+.ln.n1{opacity:.62;color:#cdbf9f}
+.ln.n2{opacity:.3;color:#cdbf9f}
+.ln.none{visibility:hidden}
+.ln.cur.hook{color:var(--hazard);letter-spacing:.02em;text-shadow:0 3px 0 #000,0 0 30px rgba(255,194,26,.5)}
+.ln.cur.spoken{font-family:var(--body);text-transform:none;font-size:clamp(22px,5.4vw,40px);line-height:1.15}
+.ln.cur.whisper{font-family:var(--body);text-transform:none;font-style:italic;color:#b7c9cf;font-size:clamp(22px,5.4vw,40px);text-shadow:0 0 14px var(--glass)}
+.ln.cur.dir{font-family:var(--body);text-transform:none;font-style:italic;font-size:clamp(15px,3.8vw,22px);color:#bfae8d;text-shadow:none}
+.ln.cur.rage{color:#fff;font-size:clamp(40px,12vw,104px);text-shadow:3px 0 var(--blood),-3px 0 var(--glass),0 0 30px var(--ember)}
+.ln.cur.finale{font-size:clamp(40px,12vw,110px);letter-spacing:.03em;text-shadow:0 0 40px var(--ember)}
+.ln.cur.pop{animation:pop .35s cubic-bezier(.2,.9,.2,1) 1}
+.ln.cur.shock{animation:shock .55s linear 1}
+@keyframes pop{0%{transform:translateY(14px) scale(.96);opacity:0}100%{transform:none;opacity:1}}
+@keyframes shock{0%{transform:scale(1.25)}20%{transform:translate(-10px,4px)}40%{transform:translate(9px,-5px)}60%{transform:translate(-6px,2px)}100%{transform:none}}
+.stage.rage{animation:stageShake .5s linear 1}
+@keyframes stageShake{0%,100%{transform:translate(0,0)}20%{transform:translate(-5px,3px)}40%{transform:translate(6px,-4px)}60%{transform:translate(-4px,-2px)}80%{transform:translate(3px,4px)}}
+.flash{inset:0;background:#fff;opacity:0;pointer-events:none;mix-blend-mode:difference}
+.flash.on{animation:flash .4s steps(3) 1}
+@keyframes flash{0%{opacity:.9}30%{opacity:0}60%{opacity:.7}100%{opacity:0}}
+.ash{inset:0;pointer-events:none;overflow:hidden}
+.ash i{position:absolute;width:4px;height:4px;border-radius:1px;background:#2a1a10;box-shadow:0 0 6px var(--ember);animation:ashfall 2.4s ease-in forwards}
+@keyframes ashfall{from{transform:translate(0,0) rotate(0);opacity:.9}to{transform:translate(var(--dx),170px) rotate(260deg);opacity:0}}
+
+/* dashboard */
+.dash{display:grid;gap:16px}
+.cluster{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:center}
+@media (max-width:600px){.cluster{grid-template-columns:1fr}}
+.tach{position:relative;aspect-ratio:1;max-width:340px;width:100%;justify-self:center}
+.tach svg{width:100%;height:100%;display:block}
+.odo{position:absolute;left:50%;bottom:16%;transform:translateX(-50%);font-family:var(--display);font-size:22px;letter-spacing:.06em;background:#050403;border:2px solid #4a3f36;padding:2px 10px;color:var(--hazard);white-space:nowrap}
+.side{display:grid;gap:14px}
+.lab{display:flex;justify-content:space-between;font-size:12px;color:#b9a98c;margin-bottom:4px}
+.fuel{position:relative;height:40px;border:2px solid #0e0a08;background:#0b0806;box-shadow:inset 0 0 0 2px #4a3f36;cursor:pointer;touch-action:none}
+.fuel .fill{position:absolute;left:4px;top:4px;bottom:4px;width:0;background:repeating-linear-gradient(90deg,var(--ember) 0 10px,transparent 10px 14px)}
+.heat{position:relative;height:14px;background:#0b0806;border:2px solid #0e0a08}
+.heat i{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--hazard),var(--ember),var(--blood))}
+.lamps{display:flex;gap:8px;flex-wrap:wrap}
+.lamp{font-size:11px;padding:3px 8px;border:1px solid #4a3f36;background:#120d0a;color:#6e5f50}
+.lamp.on{color:#140a04;background:var(--ember);box-shadow:0 0 12px var(--ember)}
+.ctl{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+.btn{min-height:48px;padding:8px 14px;background:linear-gradient(#4a3f36,#2e2620);border:2px solid #0e0a08;box-shadow:inset 0 2px 0 #6a5a4c,0 4px 0 #0e0a08;text-transform:uppercase;font-family:var(--display);letter-spacing:.06em;font-size:18px}
+.btn:active{transform:translateY(3px);box-shadow:inset 0 2px 0 #6a5a4c,0 1px 0 #0e0a08}
+.btn.mini{min-height:40px;padding:6px 12px;font-size:15px}
+.btn[aria-pressed=true]{background:var(--hazard);color:#140a04}
+.ign{position:relative;width:132px;height:132px;border-radius:50%;padding:0;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#6d2410,#2a0c05 70%);border:4px solid #0e0a08;box-shadow:inset 0 0 0 3px var(--rust),0 0 0 4px #4a3f36,0 8px 20px #000;touch-action:none;user-select:none;-webkit-user-select:none}
+.ign svg{position:absolute;inset:-8px;width:calc(100% + 16px);height:calc(100% + 16px);transform:rotate(-90deg);pointer-events:none}
+.ign .txt{position:relative;font-family:var(--display);font-size:20px;line-height:1;letter-spacing:.05em;text-transform:uppercase;padding:0 12px;text-align:center}
+.ign.holding{animation:rumble .08s linear infinite}
+.ign.on{box-shadow:inset 0 0 0 3px var(--ember),0 0 0 4px #4a3f36,0 0 30px rgba(255,122,26,.55),0 8px 20px #000}
+@keyframes rumble{0%{transform:translate(0,0)}25%{transform:translate(1.5px,-1px)}50%{transform:translate(-1.5px,1px)}75%{transform:translate(1px,1.5px)}100%{transform:translate(0,0)}}
+.ctl2{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.thr{display:flex;align-items:center;gap:8px;font-size:12px;color:#b9a98c}
+.thr input{width:120px;accent-color:var(--ember)}
+
+/* manifest */
+h2.sec{margin:0 0 12px;font-family:var(--display);font-weight:400;font-size:28px;letter-spacing:.04em;text-transform:uppercase}
+ol.cargo{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cargo li{display:block}
+.row{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;text-align:left;padding:8px 10px;background:#1a1411;border:2px solid #0e0a08;box-shadow:inset 0 0 0 1px #4a3f36}
+.row .num{font-family:var(--display);font-size:26px;color:var(--hazard)}
+.row .tt{font-family:var(--display);font-size:20px;letter-spacing:.03em;text-transform:uppercase;line-height:1.05}
+.row .meta{font-size:12px;color:#a89877}
+.cargo li.act .row{background:linear-gradient(90deg,#4a1a0a,#1a1411 70%);box-shadow:inset 0 0 0 2px var(--ember)}
+.leds{display:flex;gap:4px}
+.led{font-style:normal;font-size:10px;width:18px;height:18px;line-height:18px;text-align:center;border:1px solid #4a3f36;color:#5c4f43;background:#0b0806}
+.led.on{color:#0b1a1c;background:var(--glass);box-shadow:0 0 8px var(--glass)}
+.facts{display:none;margin:0;padding:8px 12px 10px;font-size:13px;color:#cdbf9f;background:#120d0a;border:2px solid #0e0a08;border-top:0}
+.cargo li.act .facts{display:block}
+.facts b{color:var(--hazard);font-weight:400}
+.takebar{display:flex;gap:6px;align-items:center;padding:4px 10px 6px;background:#1a1411;border:2px solid #0e0a08;border-top:0;box-shadow:inset 0 0 0 1px #4a3f36}
+.cargo li.act .takebar{background:linear-gradient(90deg,#4a1a0a,#1a1411 70%);box-shadow:inset 0 0 0 2px var(--ember)}
+.takelbl{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a89877;margin-right:2px}
+.take{min-height:28px;padding:2px 8px;font-family:var(--display);font-size:12px;letter-spacing:.04em;text-transform:uppercase;border:1px solid #4a3f36;background:#120d0a;color:#8a7a66;cursor:pointer}
+.take[aria-pressed=true]{color:#140a04;background:var(--ember);border-color:var(--ember);box-shadow:0 0 10px var(--ember)}
+#dashTakes{display:flex;gap:6px;align-items:center}
+#dashTakes .take{min-height:40px;padding:6px 12px;font-size:15px;border:2px solid #0e0a08;box-shadow:inset 0 2px 0 #6a5a4c,0 4px 0 #0e0a08;background:linear-gradient(#4a3f36,#2e2620);color:inherit}
+#dashTakes .take[aria-pressed=true]{background:var(--ember);color:#140a04;box-shadow:0 0 12px var(--ember),0 4px 0 #0e0a08}
+
+/* lab, sync, footer */
+.labbox{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:16px}
+@media (max-width:620px){.labbox{grid-template-columns:1fr}}
+#lab{width:100%;aspect-ratio:1;background:#000;border:2px solid #0e0a08;display:block}
+.labside{display:grid;gap:10px;align-content:start}
+.labside select{min-height:44px;background:#120d0a;color:var(--bone);border:2px solid #0e0a08;box-shadow:inset 0 0 0 1px #4a3f36;font:inherit;padding:6px 10px}
+#labOut{width:100%;max-height:260px;background:#000;border:2px solid #0e0a08}
+.note{margin:0;color:#b9a98c;font-size:13px}
+.syncline{font-family:var(--display);font-size:24px;text-transform:uppercase;margin:6px 0 12px;min-height:30px}
+.foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+
+/* rusty */
+.rusty{position:fixed;right:8px;bottom:8px;z-index:70;width:68px;padding:0;border:0;background:none;color:#8b4a22;filter:drop-shadow(0 3px 0 #000)}
+.rusty svg,.rusty img{display:block;width:100%;height:auto;transform:scaleX(-1)}
+.rusty .bub{position:absolute;right:50px;bottom:44px;background:var(--bone);color:#140a04;font-family:var(--display);padding:2px 9px;font-size:17px;opacity:0;transform:scale(.6);transform-origin:100% 100%;transition:.15s;white-space:nowrap}
+.rusty.bark .bub{opacity:1;transform:none}
+.rusty.bark{animation:hop .18s 2}
+@keyframes hop{50%{transform:translateY(-6px)}}
+.toast{position:fixed;left:50%;bottom:112px;transform:translateX(-50%);z-index:95;background:var(--hazard);color:#140a04;padding:8px 14px;font-family:var(--display);letter-spacing:.04em;text-transform:uppercase;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}
+.toast.on{opacity:1}
+.drop{position:fixed;inset:0;z-index:97;display:none;place-items:center;background:rgba(10,6,4,.9);border:10px dashed var(--hazard);font-family:var(--display);font-size:clamp(40px,10vw,110px);text-transform:uppercase;text-align:center;padding:20px}
+.drop.on{display:grid}
+
+/* dispatch */
+.disp{position:fixed;inset:0;z-index:100;background:rgba(8,5,3,.97);overflow-y:auto;display:none}
+.disp.on{display:block}
+.disp .in{max-width:900px;margin:0 auto;padding:0 16px 90px}
+.disp header{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;position:sticky;top:0;background:rgba(8,5,3,.97);padding:12px 0;z-index:2;border-bottom:3px solid var(--hazard)}
+.disp h2{margin:0;font-family:var(--display);font-weight:400;font-size:30px;letter-spacing:.04em;text-transform:uppercase}
+.cbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.disp header .cbtns{margin-top:0}
+.lead{color:#cdbf9f;max-width:62ch}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+.tab{min-height:40px;padding:6px 14px;background:#1a1411;border:2px solid #0e0a08;box-shadow:inset 0 0 0 1px #4a3f36;font-family:var(--display);font-size:17px;letter-spacing:.05em;text-transform:uppercase}
+.tab[aria-selected=true]{background:var(--hazard);color:#140a04}
+pre.md{white-space:pre-wrap;overflow-wrap:anywhere;background:#120d0a;border:1px solid #4a3f36;padding:12px;max-height:56vh;overflow:auto;font-size:13px;margin:0}
+.card{border:2px solid #3a2f27;background:#150f0c;padding:12px;margin:0 0 12px}
+.card h3{margin:0 0 8px;font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.03em;text-transform:uppercase;color:var(--hazard)}
+.kv{font-size:12px;color:#a89877;margin:10px 0 3px}
+.copybox{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.9);display:none;place-items:center;padding:16px}
+.copybox.on{display:grid}
+.copybox div{width:min(760px,100%)}
+.copybox textarea{width:100%;height:50vh;background:#120d0a;color:var(--bone);border:2px solid var(--hazard);padding:10px;font:13px/1.4 var(--body)}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001s!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035 0.06" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+<canvas id="world"></canvas>
+<div class="veil"></div>
+<div class="grain"></div>
+
+<main class="rig">
+
+  <header class="plate">
+    <div class="stripe"></div>
+    <div class="headrow">
+      <svg class="tug" viewBox="0 0 90 150" aria-hidden="true">
+        <path d="M45 0 L40 11 L50 11Z" fill="#eadfc4"/>
+        <line x1="45" y1="12" x2="45" y2="150" stroke="#8a7766" stroke-width="3"/>
+        <circle cx="45" cy="22" r="13" fill="#050403" stroke="#eadfc4" stroke-width="2"/>
+        <circle cx="45" cy="22" r="5" fill="#ff7a1a"/>
+        <g class="tails" id="tails" fill="none" stroke="#eadfc4" stroke-width="1.8" stroke-linecap="round"></g>
+      </svg>
+      <div>
+        <h1><span class="a">THE KHAN</span><span class="b">OF THE BLACK STEPPE</span></h1>
+        <p class="sub" id="sub">Ten tracks narrated by the man who ordered them forgotten. Hold the button, warm the engine, ride.</p>
+      </div>
+    </div>
+    <img id="coverImg" class="cover" alt="Album cover" hidden>
+  </header>
+
+  <section class="stage" id="stage" aria-label="Lyrics and visuals">
+    <div class="sbg">
+      <canvas id="poster"></canvas>
+      <img id="stImg" alt="" hidden>
+      <video id="stVid" muted loop playsinline preload="auto" hidden></video>
+      <img id="khanImg" class="khan" alt="" hidden>
+    </div>
+    <div class="shade"></div>
+    <svg class="crack" viewBox="0 0 200 200" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width=".8" stroke-linecap="round"><polyline points="200,0 150,38 118,40 84,78 62,74 30,122"/><polyline points="150,38 160,70 140,96"/><polyline points="118,40 104,14 90,8"/><polyline points="84,78 96,104 80,140"/><circle cx="200" cy="0" r="7"/></g></svg>
+    <div class="ash" id="ash"></div>
+    <div class="hud"><span id="secLabel">Engine cold</span><span id="trkTag">01</span></div>
+    <div class="reel" id="reel">
+      <p class="ln p2 none"></p><p class="ln p1 none"></p><p class="ln cur"></p><p class="ln n1 none"></p><p class="ln n2 none"></p>
+    </div>
+    <div class="flash" id="flash"></div>
+  </section>
+
+  <section class="plate dash" aria-label="Controls">
+    <div class="cluster">
+      <div class="tach"><svg id="tach" viewBox="0 0 300 300" role="img" aria-label="Tachometer"></svg><div class="odo"><span id="tNow">0:00</span> / <span id="tTot">0:00</span></div></div>
+      <div class="side">
+        <div><div class="lab"><span>Fuel</span><span id="fuelTxt">E</span></div>
+          <div class="fuel" id="fuel" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="fill" id="fuelFill"></div></div></div>
+        <div><div class="lab"><span>Heat</span><span id="heatTxt">0</span></div><div class="heat"><i id="heat"></i></div></div>
+        <div class="lamps" aria-hidden="true"><span class="lamp" id="lOil">OIL</span><span class="lamp" id="lDust">DUST</span><span class="lamp" id="lAirag">AIRAG</span><span class="lamp" id="lDog">DOG</span></div>
+      </div>
+    </div>
+    <div class="ctl">
+      <button class="btn" id="bPrev" type="button">Prev</button>
+      <button class="ign" id="bIgn" type="button" aria-label="Hold to warm the engine, then ride or halt">
+        <svg viewBox="0 0 148 148" aria-hidden="true"><circle cx="74" cy="74" r="68" fill="none" stroke="#2a0c05" stroke-width="7"/><circle id="ring" cx="74" cy="74" r="68" fill="none" stroke="#ffc21a" stroke-width="7" stroke-linecap="butt"/></svg>
+        <span class="txt" id="ignTxt">Hold to warm</span>
+      </button>
+      <button class="btn" id="bNext" type="button">Next</button>
+    </div>
+    <div class="ctl2">
+      <label class="thr">Throttle <input id="vol" type="range" min="0" max="1" step="0.01" value="0.85"></label>
+      <div class="takes" id="dashTakes" role="group" aria-label="Take">
+        <button class="take" id="bTakeA" type="button" aria-pressed="true">Take A</button>
+        <button class="take" id="bTakeB" type="button" aria-pressed="false">Take B</button>
+      </div>
+      <button class="btn mini" id="bRep" type="button" aria-pressed="false">Repeat album</button>
+      <button class="btn mini" id="bLoad" type="button">Load files</button>
+      <button class="btn mini" id="bSync" type="button" aria-pressed="false">Sync tap</button>
+      <button class="btn mini" id="bDisp" type="button">Brief for Grok</button>
+    </div>
+    <input type="file" id="files" multiple hidden accept="audio/*,image/*,video/*">
+  </section>
+
+  <section class="plate" id="syncBox" hidden>
+    <h2 class="sec">Sync tap</h2>
+    <p class="note">Press play, then press Mark the moment each line starts. Lamps A, I and V on the manifest show which files are loaded.</p>
+    <div class="syncline" id="syncLine"></div>
+    <div class="cbtns"><button class="btn" id="syMark" type="button">Mark (M)</button><button class="btn mini" id="syUndo" type="button">Undo</button><button class="btn mini" id="syCopy" type="button">Copy timings</button><button class="btn mini" id="syReset" type="button">Reset</button></div>
+  </section>
+
+  <section class="plate" aria-label="Tracklist">
+    <h2 class="sec">Cargo manifest</h2>
+    <ol class="cargo" id="cargo"></ol>
+  </section>
+
+  <section class="plate" aria-label="Loop lab">
+    <h2 class="sec">Loop lab</h2>
+    <div class="labbox">
+      <canvas id="lab" width="720" height="720"></canvas>
+      <div class="labside">
+        <label class="lab" for="labSel" style="display:block">Hook line</label>
+        <select id="labSel"></select>
+        <p class="note">A seamless 4 second kinetic loop of the hook. Record it and use the file as a clip, or convert it to a GIF with any converter.</p>
+        <div class="cbtns"><button class="btn mini" id="labRec" type="button">Record loop</button><a class="btn mini" id="labDl" href="#" hidden style="display:inline-grid;place-items:center;text-decoration:none">Save loop</a></div>
+        <p class="note" id="labStat"></p>
+        <video id="labOut" controls loop muted playsinline hidden></video>
+      </div>
+    </div>
+  </section>
+
+  <footer class="plate foot">
+    <span class="note">Nobody wrote this down. This page is the copy that survived.</span>
+    <button class="btn mini" id="bRusty" type="button">Remove Rusty</button>
+  </footer>
+</main>
+
+<button class="rusty" id="rusty" type="button" aria-label="Rusty the dog. Press to make him bark.">
+  <span class="bub" id="bub">WOOF</span>
+  <svg viewBox="0 0 90 64" aria-hidden="true"><g fill="currentColor"><ellipse cx="38" cy="36" rx="22" ry="11"/><circle cx="64" cy="26" r="9"/><path d="M70 24 L85 29 L80 35 L68 33Z"/><path d="M58 19 L55 6 L65 17Z"/><rect x="22" y="42" width="5" height="17" rx="2"/><rect x="30" y="44" width="5" height="15" rx="2"/><rect x="46" y="44" width="5" height="15" rx="2"/><rect x="54" y="42" width="5" height="17" rx="2"/><path d="M17 33 Q5 22 10 11 Q16 24 22 30Z"/></g><circle cx="67" cy="24" r="1.8" fill="#0c0907"/></svg>
+</button>
+
+<div class="toast" id="toast" role="status"></div>
+<div class="drop" id="drop">Drop the load</div>
+
+<div class="disp" id="disp" role="dialog" aria-modal="true" aria-label="Brief for Grok"><div class="in">
+  <header><h2>Brief for Grok</h2><div class="cbtns"><button class="btn mini" id="dAll" type="button">Copy whole brief</button><button class="btn mini" id="dSrc" type="button">Copy page source</button><button class="btn mini" id="dClose" type="button">Close</button></div></header>
+  <p class="lead">Paste the first block into Grok, then send the whole brief. The tabs split the same material by job, with a copy button on every prompt.</p>
+  <div class="card"><h3>Paste this first</h3><pre class="md" id="dPrompt"></pre><div class="cbtns"><button class="btn mini" id="dPromptCopy" type="button">Copy</button></div></div>
+  <div class="tabs" role="tablist" id="dTabs"></div>
+  <div id="dBody"></div>
+</div></div>
+
+<div class="copybox" id="copybox"><div><p class="lead">Your browser blocked copying. Press and hold in the box, select all, copy.</p><textarea id="copyTa" readonly></textarea><div class="cbtns"><button class="btn mini" id="copyClose" type="button">Close</button></div></div></div>
+
+<!-- ============================================================
+     FILL IN THE BLANKS (for Grok)
+     ALBUM holds every path and lyric. For each track change audio, img, loop if
+     your files live elsewhere, and paste the array from Sync tap into timings.
+     Do not edit lyrics, style, pick, hook, palette or the other fields.
+     ============================================================ -->
+<script id="album-config">
+window.ALBUM = {
+ "title": "THE KHAN OF THE BLACK STEPPE",
+ "artist": "CHIMERA",
+ "cover": "assets/img/cover.jpg",
+ "hero": "assets/img/hero.jpg",
+ "khan": "assets/img/khan.png",
+ "rusty": "assets/img/rusty.png",
+ "idleLoop": "assets/loop/loop-idle.mp4",
+ "styleBible": "Scorched woodcut meets risograph print on cracked felt and rusted sheet iron. Palette limited to ash black, rust orange, bone white and hazard yellow, with rare lightning-glass cyan as the only accent. Heavy film grain, hard directional light, dust haze, slight print misregistration. Thirteenth-century steppe silhouettes fused with improvised iron engine-horses: riveted plates, piston rods, bronze lungs, horsehair belts, felt seals. Bleak, cinematic, no glamour. No text, letters, numbers, logos, signatures or watermarks anywhere in the image. No real-person likenesses. No imagery from any existing film, game or comic. No graphic gore: show aftermath as silhouette or implication.",
+ "excludeDefault": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+ "tracks": [
+  {
+   "n": 1,
+   "slug": "marmot-winter",
+   "title": "Marmot Winter",
+   "dur": 190,
+   "bpm": 78,
+   "palette": [
+    "#1b2a33",
+    "#0b0f12",
+    "#9fd3e6"
+   ],
+   "real": "Yesugei is poisoned at a Tatar meal, the clan abandons Hoelun and her children, they live on roots, onions, fish and marmots.",
+   "invented": "The cold engine left behind.",
+   "style": "dark industrial boom-bap, slow 78 BPM, sub bass like a diesel idling, morin khuur drone, low throat-singing underneath, wind noise, sparse metallic hi-hat like a cooling engine ticking, deadpan male rap vocal, flat and close-mic'd, no autotune, cinematic and bleak",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "Vocal is flat and close. Wind is audible. The dog bark is in the first second and the outro.",
+   "hook": "NOBODY FEEDS YOU TWICE",
+   "imgPrompt": "A nine-year-old boy asleep curled against the flank of a dead, snow-drifted iron engine-horse, one palm resting flat on its cold plating, a single weak ember glowing inside its chest, blizzard, a tiny dog silhouette in the far distance.",
+   "loopPrompt": "Snow blows sideways across the frame, the ember in the engine's chest pulses slowly, the boy's breath steams, camera locked off.",
+   "lyrics": "[Intro: wind, an engine ticking as it cools, a dog barking too close and too long]\n\n[Verse 1]\nMy father ate at an enemy's fire because he was polite\nThe meat had a second ingredient, he lasted three nights\nThe clan sat down and did the sum on us\nA widow and her litter and no iron worth the fuss\nThey took the tents, they took the herd, they took the engines off the line\nLeft us one on its side in the snow. I was nine. It was mine\nEight mouths, one marmot, and I held the knife\nFat to the ones who'd be useful by spring\nThe small one coughed so I moved him by the door\nWhere the draught is. Nobody said anything\n\n[Hook]\nNobody feeds you twice\nYou eat what the winter leaves\nWarm it with your hands till it forgives you\nNobody feeds you twice\n\n[Verse 2]\nI slept with my back to the block that whole season\nCold as a cellar, then a tick, then a knock, no reason\nPalms flat on the iron till the iron learned my name\nThe only thing that stayed was the thing that I made breathe\nMother dug up onions, taught us which roots wouldn't kill\nI kept a list of the families who watched us leave the hill\nNot a grudge. A ledger. Names are numbers with a face\nA debt doesn't go bad, it just waits in its place\n\n[Hook]\nNobody feeds you twice\nYou eat what the winter leaves\nWarm it with your hands till it forgives you\nNobody feeds you twice\n\n[Outro: spoken, flat]\nSomewhere a dog was barking at the snow\nIt never stopped. I never asked whose",
+   "audio": "assets/audio/01-marmot-winter.mp3",
+   "img": "assets/img/track-01.jpg",
+   "loop": "assets/loop/loop-01.mp4",
+   "timings": [0.0, 4.68, 10.47, 16.74, 21.68, 27.59, 32.63, 37.6, 42.0, 47.27, 51.45, 58.1, 63.32, 68.51, 73.09, 80.98, 85.26, 90.53, 94.93, 99.26, 103.68, 109.37, 114.45, 120.88, 126.1, 131.33, 135.87, 141.06, 146.2]
+  },
+  {
+   "n": 2,
+   "slug": "the-fish",
+   "title": "The Fish",
+   "dur": 170,
+   "bpm": 70,
+   "palette": [
+    "#2c2a22",
+    "#0d0c0a",
+    "#c9d6d8"
+   ],
+   "real": "Temujin and Khasar kill their older half-brother Begter after he takes a fish. Begter's last request is to spare Belgutei. Hoelun curses her sons with a list of animals.",
+   "invented": "Nothing. It is already the cruellest thing in the story.",
+   "style": "stripped minimal boom-bap, 70 BPM, dull kick like a fist on felt, single bowed morin khuur stabs, one arrow-whistle effect, deadpan low rap, whispered doubles on the hook, dry close room, tense and restrained",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "Hook doubles are whispered. No melodic singing anywhere. The dog is audible near the intro.",
+   "hook": "IT WAS A SMALL FISH",
+   "imgPrompt": "A silver fish lying on a flat grey stone in cold snow-light, a small hand reaching for it from the left, two long shadows of older youths holding bows falling across the stone from the right, a ragged dog sniffing at the fish head in the corner.",
+   "loopPrompt": "Light slides across the fish scales, the two bow shadows lengthen slowly, the dog's nose twitches toward the fish, a very slow push-in.",
+   "lyrics": "[Intro: a fish slapping on a flat stone, an engine ticking, a dog very interested]\n\n[Verse 1]\nSilver, no longer than my hand\nPulled it through the ice myself, cooked it on a stone\nBegter ate it. Older. Another woman's son\nEight of us, one fish. He did the sum alone\nI went to Mother. Mother said stop fighting\nI went out the door. I wasn't fighting\nKhasar took the bow. I took the patience\nHill with the horses. He saw us coming. He sat\n\n[Hook: whispered doubles]\nIt was a small fish\nCount it, one fish, one brother\nIt was a small fish\n\n[Verse 2]\nHe didn't run. He knew the look. He'd worn it first\nSat on his heels and asked for one thing, one thing only\nLeave Belgutei. That was the whole request\nSo I left Belgutei. I keep my word when it's free\nArrow from the front, arrow from behind\nWe don't discuss the hill, we discuss the horses\nWalked home. Mother's face was weather\nShe called us every animal she'd been saving up\nThe dog that eats its own afterbirth\nThe wolf that can't tell a pack from a meal\nI ate. The dog got the head\n\n[Hook: whispered doubles]\nIt was a small fish\nCount it, one fish, one brother\nIt was a small fish\n\n[Outro: spoken, flat]\nNobody took my food again\nFair is expensive. The other thing is cheap\nI haven't been short of fish since",
+   "audio": "assets/audio/02-the-fish.mp3",
+   "img": "assets/img/track-02.jpg",
+   "loop": "assets/loop/loop-02.mp4",
+   "timings": []
+  },
+  {
+   "n": 3,
+   "slug": "warm-the-engine",
+   "title": "Warm the Engine",
+   "dur": 200,
+   "bpm": 84,
+   "palette": [
+    "#3a2a1e",
+    "#0f0a07",
+    "#ffb066"
+   ],
+   "real": "The horde's dependence on its mounts, remount strings, mare's milk as fuel for the rider.",
+   "invented": "The engines, and the crucifixion, told as maintenance. Track 9 pays it off.",
+   "style": "mid-tempo industrial hip hop, 84 BPM, rhythm built from engine ticks, bellows hiss and a hammer on iron, felt-muted kick, low brass drone, deadpan rap like a man reading a checklist, spoken-sung hook, sparse and gritty, nothing warm in the mix",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "Hook is spoken-sung, not sung. The groom verse stays completely flat. The last word is 'Breakfast' over idling.",
+   "hook": "NOBODY RIDES A COLD ONE",
+   "imgPrompt": "Dawn over a felt-tent camp, a hand pressed flat on the cold riveted bronze lung of an iron engine-horse with breath-steam rising, far in the high background a single small silhouette hung on a wooden cross-frame against the pale sun, seen only as a distant shape, a dog barking at the base of the frame.",
+   "loopPrompt": "Steam rises from the bronze lung, dawn light creeps across the iron, the distant silhouette stays perfectly still, the dog's mouth moves, camera locked off.",
+   "lyrics": "[Intro: bellows, a latch, the dog, a boy's voice far off asking someone to please]\n\n[Verse 1]\nWake. Move the girl off the arm that holds the reins\nSame as lifting a saddle blanket. Piss. Tea with fat\nCount: forty mares, nine hundred sacks of grain, six girls, fuel\nTwo of them are new. Nobody's told me their names, which saves time\n\n[Verse 2]\nHands on the iron. Palm flat. It's cold. It's always cold\nTallow in the joints, felt in the seals\nWarm the lung with breath, tap the bronze, listen\nYou talk to it low. Not words. The sound a mother makes\nThen the tick. Then the knock. Then the shudder up your spine\nA hundred more answering down the line\nThat's the day starting\n\n[Hook: spoken-sung]\nWarm the engine\nWarm the engine\nNobody rides a cold one\n\n[Verse 3]\nThe boy who kept it overnight is on the frame\nHe let the fire die. Four hours. A small thing\nLong iron spikes, the ones for the tent poles\nWrist. Wrist. Both heels through the one stay\nThe engine turns over. Heat climbs the frame\nHis hands open and shut on the nails like he's counting\nHis breath goes in pieces. Somewhere past noon the ribs stop\nChecked the belt. Checked the seal. The belt was fine\nThe dog barks at the boy. Annoying. Nobody else would\n\n[Hook: spoken-sung]\nWarm the engine\nWarm the engine\nNobody rides a cold one\n\n[Outro: spoken, flat, over idling]\nBreakfast",
+   "audio": "assets/audio/03-warm-the-engine.mp3",
+   "img": "assets/img/track-03.jpg",
+   "loop": "assets/loop/loop-03.mp4",
+   "timings": []
+  },
+  {
+   "n": 4,
+   "slug": "blood-brother",
+   "title": "Blood Brother",
+   "dur": 220,
+   "bpm": 68,
+   "palette": [
+    "#262a2e",
+    "#0b0c0e",
+    "#b9c4cc"
+   ],
+   "real": "Jamukha and Temujin swear anda as boys by trading knucklebones. Jamukha boils seventy captives in cauldrons and his men desert him. They bind him and deliver him. Temujin executes the men who betrayed their lord. Jamukha refuses to be forgiven and asks to die without blood on the ground. Sources differ on the method.",
+   "invented": "The shared engine, and the ghost answering back.",
+   "style": "sparse dark hip hop, 68 BPM, bowed morin khuur, knucklebones rattled for percussion, slow kick, long sub swells, reverb-soaked whispered ghost vocal answering a flat deadpan lead, duet feel but never harmonised, funereal",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "The ghost voice is clearly different from the lead. Knucklebone percussion is audible. The dog is silent in verse 3.",
+   "hook": "ANDA. COME AND SIT DOWN.",
+   "imgPrompt": "Two knucklebones resting on a black felt blanket between two pairs of sleeping hands, one cold iron engine-horse behind them, a second faint translucent pale figure sitting at the very edge of the frame, ghostly and half-erased.",
+   "loopPrompt": "The ghost figure flickers in and out of transparency, the knucklebones tremble slightly, wind ripples the felt, camera locked off.",
+   "lyrics": "[Intro: two knucklebones rattled in a palm, then dropped]\n\n[Verse 1: Khan]\nEleven winters old on the frozen river\nTraded knucklebones and said the word. Anda\nOne blanket. One bowl. One cold engine between us\nWe took turns warming it. You always took the longer turn\nYou were better at sleeping. That was the first thing you were better at\n\n[Hook: Khan, quiet]\nAnda\nCome and sit down\nAnda\n\n[Verse 2: Khan]\nYou boiled seventy of theirs in iron pots\nYour own men watched and did the math on what they'd got\nThey slipped out in the night and tied you up by morning\nCarried you in to me like a fish, no warning\nI killed the ones who carried you\nA man who sells his lord is a price with a mouth\nI stood you up. I said stay. I said we'll warm it together like before\nYou said one sky can't hold two suns\nYou said it kindly. That was worse\n\n[Ghost: whispered]\nLet none of me touch the ground\nLet the sky see nothing\n\n[Verse 3: Khan]\nI gave you what you asked. I give the dead what they ask. It's cheap\nNo blood on the earth. Back first, then the rest\nFelt and horses and a long time\nI stayed. Someone should know how long it takes\nYour bones went to the high ground with honour\nThe dog doesn't bark at the empty place where you sit\nThe only place he doesn't\n\n[Hook: Khan, quiet]\nAnda\nCome and sit down\nAnda\n\n[Outro: Ghost, whispered]\nI kept it warm for you\nYou woke warm\nYou never asked who\n\n[Khan, flat]\nCount the horses",
+   "audio": "assets/audio/04-blood-brother.mp3",
+   "img": "assets/img/track-04.jpg",
+   "loop": "assets/loop/loop-04.mp4",
+   "timings": []
+  },
+  {
+   "n": 5,
+   "slug": "the-finger",
+   "title": "The Finger",
+   "dur": 150,
+   "bpm": 92,
+   "palette": [
+    "#3b1a12",
+    "#0d0706",
+    "#ffcf8a"
+   ],
+   "real": "Borte is taken by the Merkits and recovered months later, already pregnant. Her first son is named Jochi, which means guest. Bo'orchu is one of Temujin's oldest companions.",
+   "invented": "The finger. It is the album's one unexplained snap. Nothing triggers it and nothing comments on it.",
+   "style": "minimal industrial trap, 92 BPM, tense and tidy, ledger-scratch percussion, one sustained low drone, the beat stutters and drops out completely for the shouted line then returns exactly as before, flat deadpan rap with one sudden unhinged shout, then flat again as if nothing happened",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "The beat drops out fully for the shout and returns identically. The shout is a single line. Everything else is flat.",
+   "hook": "CARRY THE ONE",
+   "imgPrompt": "A ledger of pale birch bark under one oil lamp, columns of ink tally marks, nine dark standing silhouettes around the lamp on felt walls, a dog's nose entering the frame from the bottom edge. No blood.",
+   "loopPrompt": "The lamp flame flickers and the nine shadows sway on the felt wall, the dog's nose twitches at the bottom edge, camera locked off.",
+   "lyrics": "[Intro: a brush on birch bark, ink, a dog sniffing at something]\n\n[Verse 1: flat, counting]\nGrain: four hundred sacks. Mares: eleven hundred, forty with foal\nEngines: nine hundred and sixty. Six in the shop. Two that won't\nWomen: two hundred and ten. Forty of them Merkit, counted at the river\nBörte is not on this list. Börte is on a different list\nThey took her in the night. I took her back in spring\nShe came with an extra mouth already on the way\nI named him Guest. That's what the word means. I wasn't being clever\nNobody at the table said a word. Good\n\n[Hook: flat]\nCarry the one\nCarry the one\nTen on the ledger. Carry the one\n\n[Verse 2: flat, steady]\nNine men around the felt, one lamp, the maps\nBo'orchu asks about the river road\nI answer. I'm calm. The water's three days, the grass is two\nThe lamp doesn't move. Nobody moves\nAnd then\n\n[Snap: shouted, beat drops out, one line]\nWHOSE HANDS ARE THESE\n\n[Verse 3: flat, fast, tidy]\nThe small one. The left. One cut\nLaid it on the ledger like a tally mark\nNobody looked. Bo'orchu held his face like a bowl that's too full\nThe dog took it off the felt. I let him\nFirst thing he's done I approved\nWrapped the hand. Finished the count\nMine. Count them\n\n[Hook: flat]\nCarry the one\nCarry the one\nNine on the ledger. Carry the one",
+   "audio": "assets/audio/05-the-finger.mp3",
+   "img": "assets/img/track-05.jpg",
+   "loop": "assets/loop/loop-05.mp4",
+   "timings": []
+  },
+  {
+   "n": 6,
+   "slug": "airag-black",
+   "title": "Airag-Black",
+   "dur": 195,
+   "bpm": 100,
+   "palette": [
+    "#0b1417",
+    "#050607",
+    "#7ff6ff"
+   ],
+   "real": "Fermented mare's milk (airag) and its distilled form, lightning glass (fulgurite) found in sand, the Mongol army's strict decimal units of ten, hundred, thousand and ten thousand.",
+   "invented": "The drug, the Dry Camps, and the Khan staying sober. The album's single: the hook is the business model.",
+   "style": "hypnotic dark trap with industrial pulse, 100 BPM half-time, sub bass that idles like an engine, throat-singing pad, pitched-down chant on the hook, sticky and mean, cold deadpan verses that lean into a melodic hook, sparse but heavy",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "The hook is the catchiest thing on the album. The chant is pitched down. The verses stay deadpan.",
+   "hook": "DRINK AND IT HUMS. STOP AND IT HURTS.",
+   "imgPrompt": "A clay cup of perfectly black liquid on a flat stone, jagged shards of glowing cyan lightning-glass around it, the black surface reflecting a hundred rider silhouettes, thin hollow figures sitting in grey ash at the far edge.",
+   "loopPrompt": "The black liquid ripples from inside, the cyan glass shards pulse softly, the reflected riders shimmer, camera locked off.",
+   "lyrics": "[Intro: a lightning crack, glass breaking underfoot, a pot beginning to simmer]\n\n[Verse 1]\nMare's milk, three days in the skin, turn it every hour\nRun it through the clay still until it's clear as a lie\nThen the glass. Lightning glass, where the sky hit the sand and left a root\nGrind it fine as flour, stir it in, it goes black as a well\nOne cup and you feel the engine through your spine\nTwo cups and you hear what it wants\n\n[Hook: pitched-down chant]\nDrink and it hums\nStop and it hurts\nEither way you ride for me\n\n[Verse 2]\nRation by rank. The dose is on the ledger\nNobody drinks alone. Nobody drinks at night\nTen to a unit, the tenth man holds the flask, the nine watch the tenth\nThe horde runs on tens. The cup runs on tens. Nothing unaccounted\nThe Dry Camps took it with no ledger. Hollowed out in a season\nThey sit in the ash by the old wells, mouths open, ribs counting themselves\nSome can still ride. They ride at whatever's moving\nThat's a weapon too, if you aim it\n\n[Hook: pitched-down chant]\nDrink and it hums\nStop and it hurts\nEither way you ride for me\n\n[Verse 3]\nThey say I'm high on my own supply. Let them say it\nThe ones who say it keep drinking, so it's useful\nI haven't tasted it once. Not once\nI light the lamp and I watch them taste\nEverything I do, I do clear\n\n[Outro: flat, over idling]\nRusty bit a man from the Dry Camps this morning\nNobody stopped him. He's the only one with a policy",
+   "audio": "assets/audio/06-airag-black.mp3",
+   "img": "assets/img/track-06.jpg",
+   "loop": "assets/loop/loop-06.mp4",
+   "timings": []
+  },
+  {
+   "n": 7,
+   "slug": "idle",
+   "title": "Idle",
+   "dur": 90,
+   "bpm": 55,
+   "palette": [
+    "#2a2118",
+    "#0a0806",
+    "#e8c27a"
+   ],
+   "real": "Mongol eagle hunting, and the caravan massacre at Otrar that starts the Khwarazm war.",
+   "invented": "The sound of a hundred thousand engines idling. The calm before the loudest track.",
+   "style": "dark ambient, 55 BPM, no drums, a low two-beat engine chuff as the only pulse, distant golden eagle cry, wind, one long bowed morin khuur note, close-mic'd breathing, one spoken passage in a near-whisper, no hook",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "No beat at all. The whispered passage is intelligible. If Suno sings it, use the fallback in the brief.",
+   "hook": "COUNT THEM.",
+   "imgPrompt": "A golden eagle perched on a leather-gauntleted wrist in sharp foreground, breath-steam in cold air, behind it a vast field of a hundred thousand idling iron engine-horses stretching to the horizon at dawn, exhaust haze lying over them like a lake.",
+   "loopPrompt": "Exhaust haze drifts slowly across the field of engines, the eagle ruffles its feathers and turns its head slightly, breath-steam rises, camera locked off.",
+   "lyrics": "[Intro: a hundred thousand engines idling in grass, wind, one eagle call far above]\n\n[Spoken, close, almost breath]\nDawn\nA hundred thousand engines idling in the grass\nThe sound of a field breathing through its teeth\nEagle on my wrist. She weighs what a child weighs\nShe's looking at something that doesn't know yet it's food\nTwenty days west, a man killed my caravan\nI'm not angry. I'm looking at the eagle\nNobody speaks. Nobody coughs\nFour in. Hold. Four out\nCount them\n\n[Outro: engines idle, a single bark, cut off]",
+   "audio": "assets/audio/07-idle.mp3",
+   "img": "assets/img/track-07.jpg",
+   "loop": "assets/loop/loop-07.mp4",
+   "timings": [0.0, 9.93, 13.56, 20.02, 26.67, 33.94, 40.25, 48.08, 52.68, 57.31, 65.92, 67.26]
+  },
+  {
+   "n": 8,
+   "slug": "the-cistern",
+   "title": "The Cistern",
+   "dur": 240,
+   "bpm": 88,
+   "palette": [
+    "#10202a",
+    "#05080b",
+    "#8fd0e8"
+   ],
+   "real": "The governor of Otrar, Inalchuq, has a caravan of roughly 450 merchants killed. The shah kills the envoy sent to ask for redress and burns the beards of his escorts. Otrar's siege is recorded at about five months. Inalchuq is said to have died with molten silver poured into his eyes and ears.",
+   "invented": "The poisoned water, the nineteen mornings, and the siege being a cover story. The centrepiece.",
+   "style": "epic dark hip hop, 88 BPM building, war-drum toms, an engine roar swelling under the hook, low brass drone, deadpan narration getting colder as it escalates, a near-silent breakdown before the last verse",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "The structure builds. The breakdown before verse 3 is nearly silent. The dog drinking line lands.",
+   "hook": "THE GATES CAME OPEN FROM THE INSIDE",
+   "imgPrompt": "A vast stone cistern of black water under a night sky, the reflection of a walled city wall rippling in it, tanker barrels on a canal in the foreground, a single scruffy dog lapping at the water's edge, unbothered.",
+   "loopPrompt": "The black water surface ripples, torchlight flickers on the reflected city wall, the dog laps steadily, camera locked off.",
+   "lyrics": "[Intro: a hundred thousand engines shutting off one by one, then silence, then water dripping]\n\n[Verse 1]\nFour hundred and fifty of mine in his book\nMerchants. Wool and silk. He wrote spies. He wrote it with a seal\nI sent a man to ask for the killer\nThey burned the beards off two and killed the one who spoke\nI wasn't angry. I counted the water between us\nA canal, a cistern, a city that drinks the same thing every dawn\n\n[Hook]\nNineteen mornings\nSame cistern, same cup\nThe gates came open from the inside\n\n[Verse 2]\nThe last tanker went up the canal in the dark\nOne drip in ten thousand. Not enough to feel\nEnough to teach the body\nDay nineteen the first of them shook at the well\nDay twenty they were at the wall, throwing their swords down for a cup\nSome of them offered their daughters\nI took the daughters. I also kept the cup\nThe dog drank first. Nothing. The dog is impossible to impress\n\n[Hook]\nNineteen mornings\nSame cistern, same cup\nThe gates came open from the inside\n\n[Verse 3: near-silent breakdown]\nInalchuq asked for silver. He'd earned a hall of it\nI had the caravan's own coin melted in the same pot as the glass\nHe wanted silver. I'm generous\nEyes first. Then the ears, so he'd hear it\nBrim full. He had all of it\n\n[Outro: spoken, flat]\nFive months, they wrote. It was three weeks\nThe rest is what you tell people so they don't ask about the water",
+   "audio": "assets/audio/08-the-cistern.mp3",
+   "img": "assets/img/track-08.jpg",
+   "loop": "assets/loop/loop-08.mp4",
+   "timings": []
+  },
+  {
+   "n": 9,
+   "slug": "nice-house-shame-about-the-fire",
+   "title": "Nice House, Shame About the Fire",
+   "dur": 190,
+   "bpm": 96,
+   "palette": [
+    "#3a1608",
+    "#0e0603",
+    "#ffb12e"
+   ],
+   "real": "Plutarch's account of Crassus buying burning buildings and then sending in his fire crew (a reputation, not proven). The roughly 6,000 captured rebels crucified along the Appian Way after the Spartacus revolt. Genghis taking Bukhara in 1220.",
+   "invented": "A broker who bought the name and the trade with the business, the fire at the camp, and the reversal. The one track where the Khan sounds amused.",
+   "style": "swaggering menacing hip hop diss, 96 BPM, bouncy but cold, tuba-like sub bass, brass stabs, a bucket clanging for percussion, the Khan sounds amused for the first time on the album, mocking half-sung hook with the same deadpan underneath",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "The Khan sounds amused. The shouted line drops the beat out. The hook is mocking but still deadpan.",
+   "hook": "NICE HOUSE. SHAME ABOUT THE FIRE.",
+   "imgPrompt": "A burning villa on a ridge at dusk, a silk-robed broker standing in front of it beside forty buckets lined up in rows, a ridge of riders on iron engine-horses behind him in silhouette, a scruffy dog at the broker's feet.",
+   "loopPrompt": "Villa fire flickers, embers rise into the dusk, the broker's robes ripple in the heat, the riders shift on the ridge, the dog sniffs at the buckets.",
+   "lyrics": "[Intro: a bucket clanging, a Roman-style horn, engines, the dog]\n\n[Verse 1]\nMan from the house of Crassus came to my burning camp\nBought the name with the business, same as buying a seat\nForty men, forty buckets, a silk-lined smile\nSaid four hundred denarii, Khan, for the lot, while it burns\nI'll put it out and you'll walk away with coin\nPolite. Rehearsed. He's said it to a hundred widows\n\n[Hook: mocking, half-sung]\nNice house\nShame about the fire\nYou sell the cure\nI sell the sickness and the cure\n\n[Verse 2]\nI let him finish. I let him say the number twice\nThen I told him who lit it. It's my grass. I light what I like\nI wanted to see who came running with a bucket\nA whole house that lives on someone else's worst day\nI didn't hit him. I bought his crew\nOne cup each. The black. Forty men, forty cups\nBy dusk his men were mine and his buckets were mine\nThe fire was out because I said it was\n\n[Verse 3]\nYour people lined a road with six thousand to make a point\nA whole road of men. Expensive. Slow\nI needed one. A groom on a frame. The point's the same\nNobody leaves it cold\nThen I rode to his house in Bukhara. The fire was already going\nStood in the road and offered him four coins for the lot\nWhile it burned. He took them. He had no crew left to say no\n\n[Snap: shouted, beat drops out]\nSAY IT. SAY NICE HOUSE\n\n[Flat]\nHe said it\nThe dog pissed on his boots. I didn't stop him\n\n[Hook: mocking, half-sung]\nNice house\nShame about the fire\nYou sell the cure\nI sell the sickness and the cure\n\n[Outro: spoken, amused]\nNice house",
+   "audio": "assets/audio/09-nice-house-shame-about-the-fire.mp3",
+   "img": "assets/img/track-09.jpg",
+   "loop": "assets/loop/loop-09.mp4",
+   "timings": [0.0, 10.13, 14.9, 19.82, 24.61, 29.69, 34.56, 38.52, 42.97, 45.79, 47.17, 50.76, 54.98, 59.69, 62.77, 65.62, 67.56, 69.96, 75.05, 79.29, 82.39, 84.72, 87.62, 89.16, 94.05, 97.17, 103.64, 107.06, 108.24, 112.93, 116.01, 118.8, 120.2, 122.8]
+  },
+  {
+   "n": 10,
+   "slug": "the-great-silence",
+   "title": "The Great Silence",
+   "dur": 210,
+   "bpm": 60,
+   "palette": [
+    "#1a1a16",
+    "#060605",
+    "#d8d2bc"
+   ],
+   "real": "He dies in 1227 during the Western Xia campaign, cause unknown. The burial place has never been found. Later legends say the funeral escort killed everyone it met and a river was turned over the grave.",
+   "invented": "The engines buried with him, the burned records, and the reason history says fast horsemen. The payoff for the whole premise.",
+   "style": "slow ominous cinematic outro, 60 BPM, engines idling as the only drums, shutting off one at a time across the track, throat-singing pad, one long morin khuur note, flat tired narration with no flourish, final twenty seconds just wind and a dog",
+   "exclude": "pop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming",
+   "pick": "The engines drop out one at a time. The last twenty seconds are only wind and one bark. 'Somebody didn't' is spoken, not sung.",
+   "hook": "WRITE NOTHING DOWN.",
+   "imgPrompt": "A river turned out of its bed across an unmarked stretch of steppe grass at dusk, the rear of an iron engine-horse barely visible under the turf, wide empty plain, wind, a tiny dog silhouette barking at the dirt.",
+   "loopPrompt": "Wind combs the grass, light glints on the diverted river, the tiny dog barks and shifts, dust drifts, a very slow push-in.",
+   "lyrics": "[Intro: engines idling, one by one shutting off]\n\n[Verse 1]\nI fell, or I was sick, or a woman did it. Pick\nNobody knows. That's the plan. The cause went quiet quick\nWestern Xia, summer, the year I lost the count\nThe order was written before the fever, the date left blank\n\n[Verse 2]\nBury the engines with me, every one that can be found\nMelt down the rest. The smiths go in the ground\nThe escort that carries me kills what it meets\nThen the escort is killed. Then those who killed the escort. Then the streets\nGo quiet. Then the river's turned across the place\nLeave the horses. Let the horses take the praise\n\n[Hook: low, chanted]\nWrite nothing down\nWrite nothing down\nLet them say fast horsemen\n\n[Verse 3]\nEight hundred years and nobody's found the grave\nThat's the last trick of the engines: they keep the quiet I gave\nThey scraped my name off the iron and wrote it in the grass\nThey call it a miracle of cavalry. They call it fast\nIt was never the horses\n\n[Spoken, flat]\nThe order was: burn every page that says what ran under us\nIf you're hearing this\nSomebody didn't\n\n[Outro: wind, one dog barking at the dirt, then cut]",
+   "audio": "assets/audio/10-the-great-silence.mp3",
+   "img": "assets/img/track-10.jpg",
+   "loop": "assets/loop/loop-10.mp4",
+   "timings": []
+  }
+ ]
+};
+window.BRIEF = {"prompt": "You are the production bot for an album called THE KHAN OF THE BLACK STEPPE. Read the whole attached brief first. Work in this order: (1) generate the ten tracks in Suno exactly as specified, two takes each, and save the best take of each as NN-slug.mp3; (2) generate the images in the shot list with the style bible in front of every prompt, with no text in any image; (3) turn each track image into a 5 second seamless loop; (4) put every file into the folder tree in the WIRING section; (5) run the QA checklist and report back as a table of file, status and notes. Do not rewrite, reorder or soften the lyrics. Do not put the name of any existing film, franchise, game or artist in any prompt. If a tool cannot do a step, say so in the report instead of faking the file.", "sections": [{"id": "mission", "title": "Mission", "md": "# Production brief: THE KHAN OF THE BLACK STEPPE\n\n## What this is\nA ten-track rap album narrated in the first person by Genghis Khan, in an alternate history where the Mongol horde rode iron engine-horses fuelled by distilled mare's milk, and the Khan ordered every record of them burned. The narrator is cold, flat and exact. He counts women, horses, grain and fuel in the same breath. He snaps once or twice with no warning, then goes flat again. A dog called Rusty is in the background of everything and is never explained.\n\nThe album is wrapped in a single HTML player (index.html). Your job is to produce the audio, images and loops that the player loads.\n\n## Your jobs, in order\n1. Generate all ten tracks in Suno from the SUNO section.\n2. Generate the images in the IMAGES section.\n3. Turn each track image into a 5 second seamless loop (LOOPS section).\n4. Place every file as shown in WIRING, then open index.html and run the QA checklist.\n5. Report back as a table: file, status, notes.\n\n## Hard rules\n- The lyrics are final. Do not rewrite, reorder, add or soften anything. Paste them exactly, including the bracket tags.\n- If Suno refuses a line, change only the offending verb, log the change in your report, and keep the delivery flat.\n- Do not put the name of any existing film, franchise, game or artist in any prompt.\n- No text inside any image or video.\n- No real-person likenesses.\n- Keep the best two takes per track. Best goes to assets/audio/, runner-up to assets/audio/alt/.\n- If a tool cannot do a step, say so. Do not fake the file.\n"}, {"id": "suno", "title": "Suno", "md": "# SUNO: ten tracks\n\n## Settings for every track\n- Model: the newest available.\n- Mode: Custom.\n- Vocal: male. Instrumental: off.\n- Weirdness: 45 to 55. Style influence: 65 to 75.\n- Paste the Style block into Style of Music. Paste the Exclude block into Exclude styles. Paste the lyrics block into Lyrics, exactly as written, brackets included.\n- Generate at least two takes per track. Pick by the line under \"Pick the take where\".\n- Name each file NN-slug.mp3 (for example 01-marmot-winter.mp3).\n\n## Fallback for Track 7 (Idle)\nIdle is mostly spoken. If Suno sings the spoken part, generate it as an instrumental with the same style block, then record the spoken passage separately (a plain close-mic voice, no music) and mix it over the top. Keep the final under 1:45.\n\n## Fallback for spoken outros\nIf a take sings a part marked spoken, add \"spoken word, monotone\" to the style for that run.\n\n## 01 Marmot Winter (target 3:10, 78 BPM)\nFile: 01-marmot-winter.mp3\n\nStyle of Music:\ndark industrial boom-bap, slow 78 BPM, sub bass like a diesel idling, morin khuur drone, low throat-singing underneath, wind noise, sparse metallic hi-hat like a cooling engine ticking, deadpan male rap vocal, flat and close-mic'd, no autotune, cinematic and bleak\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: Vocal is flat and close. Wind is audible. The dog bark is in the first second and the outro.\n\nLyrics:\n```\n[Intro: wind, an engine ticking as it cools, a dog barking too close and too long]\n\n[Verse 1]\nMy father ate at an enemy's fire because he was polite\nThe meat had a second ingredient, he lasted three nights\nThe clan sat down and did the sum on us\nA widow and her litter and no iron worth the fuss\nThey took the tents, they took the herd, they took the engines off the line\nLeft us one on its side in the snow. I was nine. It was mine\nEight mouths, one marmot, and I held the knife\nFat to the ones who'd be useful by spring\nThe small one coughed so I moved him by the door\nWhere the draught is. Nobody said anything\n\n[Hook]\nNobody feeds you twice\nYou eat what the winter leaves\nWarm it with your hands till it forgives you\nNobody feeds you twice\n\n[Verse 2]\nI slept with my back to the block that whole season\nCold as a cellar, then a tick, then a knock, no reason\nPalms flat on the iron till the iron learned my name\nThe only thing that stayed was the thing that I made breathe\nMother dug up onions, taught us which roots wouldn't kill\nI kept a list of the families who watched us leave the hill\nNot a grudge. A ledger. Names are numbers with a face\nA debt doesn't go bad, it just waits in its place\n\n[Hook]\nNobody feeds you twice\nYou eat what the winter leaves\nWarm it with your hands till it forgives you\nNobody feeds you twice\n\n[Outro: spoken, flat]\nSomewhere a dog was barking at the snow\nIt never stopped. I never asked whose\n```\n\n## 02 The Fish (target 2:50, 70 BPM)\nFile: 02-the-fish.mp3\n\nStyle of Music:\nstripped minimal boom-bap, 70 BPM, dull kick like a fist on felt, single bowed morin khuur stabs, one arrow-whistle effect, deadpan low rap, whispered doubles on the hook, dry close room, tense and restrained\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: Hook doubles are whispered. No melodic singing anywhere. The dog is audible near the intro.\n\nLyrics:\n```\n[Intro: a fish slapping on a flat stone, an engine ticking, a dog very interested]\n\n[Verse 1]\nSilver, no longer than my hand\nPulled it through the ice myself, cooked it on a stone\nBegter ate it. Older. Another woman's son\nEight of us, one fish. He did the sum alone\nI went to Mother. Mother said stop fighting\nI went out the door. I wasn't fighting\nKhasar took the bow. I took the patience\nHill with the horses. He saw us coming. He sat\n\n[Hook: whispered doubles]\nIt was a small fish\nCount it, one fish, one brother\nIt was a small fish\n\n[Verse 2]\nHe didn't run. He knew the look. He'd worn it first\nSat on his heels and asked for one thing, one thing only\nLeave Belgutei. That was the whole request\nSo I left Belgutei. I keep my word when it's free\nArrow from the front, arrow from behind\nWe don't discuss the hill, we discuss the horses\nWalked home. Mother's face was weather\nShe called us every animal she'd been saving up\nThe dog that eats its own afterbirth\nThe wolf that can't tell a pack from a meal\nI ate. The dog got the head\n\n[Hook: whispered doubles]\nIt was a small fish\nCount it, one fish, one brother\nIt was a small fish\n\n[Outro: spoken, flat]\nNobody took my food again\nFair is expensive. The other thing is cheap\nI haven't been short of fish since\n```\n\n## 03 Warm the Engine (target 3:20, 84 BPM)\nFile: 03-warm-the-engine.mp3\n\nStyle of Music:\nmid-tempo industrial hip hop, 84 BPM, rhythm built from engine ticks, bellows hiss and a hammer on iron, felt-muted kick, low brass drone, deadpan rap like a man reading a checklist, spoken-sung hook, sparse and gritty, nothing warm in the mix\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: Hook is spoken-sung, not sung. The groom verse stays completely flat. The last word is 'Breakfast' over idling.\n\nLyrics:\n```\n[Intro: bellows, a latch, the dog, a boy's voice far off asking someone to please]\n\n[Verse 1]\nWake. Move the girl off the arm that holds the reins\nSame as lifting a saddle blanket. Piss. Tea with fat\nCount: forty mares, nine hundred sacks of grain, six girls, fuel\nTwo of them are new. Nobody's told me their names, which saves time\n\n[Verse 2]\nHands on the iron. Palm flat. It's cold. It's always cold\nTallow in the joints, felt in the seals\nWarm the lung with breath, tap the bronze, listen\nYou talk to it low. Not words. The sound a mother makes\nThen the tick. Then the knock. Then the shudder up your spine\nA hundred more answering down the line\nThat's the day starting\n\n[Hook: spoken-sung]\nWarm the engine\nWarm the engine\nNobody rides a cold one\n\n[Verse 3]\nThe boy who kept it overnight is on the frame\nHe let the fire die. Four hours. A small thing\nLong iron spikes, the ones for the tent poles\nWrist. Wrist. Both heels through the one stay\nThe engine turns over. Heat climbs the frame\nHis hands open and shut on the nails like he's counting\nHis breath goes in pieces. Somewhere past noon the ribs stop\nChecked the belt. Checked the seal. The belt was fine\nThe dog barks at the boy. Annoying. Nobody else would\n\n[Hook: spoken-sung]\nWarm the engine\nWarm the engine\nNobody rides a cold one\n\n[Outro: spoken, flat, over idling]\nBreakfast\n```\n\n## 04 Blood Brother (target 3:40, 68 BPM)\nFile: 04-blood-brother.mp3\n\nStyle of Music:\nsparse dark hip hop, 68 BPM, bowed morin khuur, knucklebones rattled for percussion, slow kick, long sub swells, reverb-soaked whispered ghost vocal answering a flat deadpan lead, duet feel but never harmonised, funereal\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The ghost voice is clearly different from the lead. Knucklebone percussion is audible. The dog is silent in verse 3.\n\nLyrics:\n```\n[Intro: two knucklebones rattled in a palm, then dropped]\n\n[Verse 1: Khan]\nEleven winters old on the frozen river\nTraded knucklebones and said the word. Anda\nOne blanket. One bowl. One cold engine between us\nWe took turns warming it. You always took the longer turn\nYou were better at sleeping. That was the first thing you were better at\n\n[Hook: Khan, quiet]\nAnda\nCome and sit down\nAnda\n\n[Verse 2: Khan]\nYou boiled seventy of theirs in iron pots\nYour own men watched and did the math on what they'd got\nThey slipped out in the night and tied you up by morning\nCarried you in to me like a fish, no warning\nI killed the ones who carried you\nA man who sells his lord is a price with a mouth\nI stood you up. I said stay. I said we'll warm it together like before\nYou said one sky can't hold two suns\nYou said it kindly. That was worse\n\n[Ghost: whispered]\nLet none of me touch the ground\nLet the sky see nothing\n\n[Verse 3: Khan]\nI gave you what you asked. I give the dead what they ask. It's cheap\nNo blood on the earth. Back first, then the rest\nFelt and horses and a long time\nI stayed. Someone should know how long it takes\nYour bones went to the high ground with honour\nThe dog doesn't bark at the empty place where you sit\nThe only place he doesn't\n\n[Hook: Khan, quiet]\nAnda\nCome and sit down\nAnda\n\n[Outro: Ghost, whispered]\nI kept it warm for you\nYou woke warm\nYou never asked who\n\n[Khan, flat]\nCount the horses\n```\n\n## 05 The Finger (target 2:30, 92 BPM)\nFile: 05-the-finger.mp3\n\nStyle of Music:\nminimal industrial trap, 92 BPM, tense and tidy, ledger-scratch percussion, one sustained low drone, the beat stutters and drops out completely for the shouted line then returns exactly as before, flat deadpan rap with one sudden unhinged shout, then flat again as if nothing happened\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The beat drops out fully for the shout and returns identically. The shout is a single line. Everything else is flat.\n\nLyrics:\n```\n[Intro: a brush on birch bark, ink, a dog sniffing at something]\n\n[Verse 1: flat, counting]\nGrain: four hundred sacks. Mares: eleven hundred, forty with foal\nEngines: nine hundred and sixty. Six in the shop. Two that won't\nWomen: two hundred and ten. Forty of them Merkit, counted at the river\nBörte is not on this list. Börte is on a different list\nThey took her in the night. I took her back in spring\nShe came with an extra mouth already on the way\nI named him Guest. That's what the word means. I wasn't being clever\nNobody at the table said a word. Good\n\n[Hook: flat]\nCarry the one\nCarry the one\nTen on the ledger. Carry the one\n\n[Verse 2: flat, steady]\nNine men around the felt, one lamp, the maps\nBo'orchu asks about the river road\nI answer. I'm calm. The water's three days, the grass is two\nThe lamp doesn't move. Nobody moves\nAnd then\n\n[Snap: shouted, beat drops out, one line]\nWHOSE HANDS ARE THESE\n\n[Verse 3: flat, fast, tidy]\nThe small one. The left. One cut\nLaid it on the ledger like a tally mark\nNobody looked. Bo'orchu held his face like a bowl that's too full\nThe dog took it off the felt. I let him\nFirst thing he's done I approved\nWrapped the hand. Finished the count\nMine. Count them\n\n[Hook: flat]\nCarry the one\nCarry the one\nNine on the ledger. Carry the one\n```\n\n## 06 Airag-Black (target 3:15, 100 BPM)\nFile: 06-airag-black.mp3\n\nStyle of Music:\nhypnotic dark trap with industrial pulse, 100 BPM half-time, sub bass that idles like an engine, throat-singing pad, pitched-down chant on the hook, sticky and mean, cold deadpan verses that lean into a melodic hook, sparse but heavy\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The hook is the catchiest thing on the album. The chant is pitched down. The verses stay deadpan.\n\nLyrics:\n```\n[Intro: a lightning crack, glass breaking underfoot, a pot beginning to simmer]\n\n[Verse 1]\nMare's milk, three days in the skin, turn it every hour\nRun it through the clay still until it's clear as a lie\nThen the glass. Lightning glass, where the sky hit the sand and left a root\nGrind it fine as flour, stir it in, it goes black as a well\nOne cup and you feel the engine through your spine\nTwo cups and you hear what it wants\n\n[Hook: pitched-down chant]\nDrink and it hums\nStop and it hurts\nEither way you ride for me\n\n[Verse 2]\nRation by rank. The dose is on the ledger\nNobody drinks alone. Nobody drinks at night\nTen to a unit, the tenth man holds the flask, the nine watch the tenth\nThe horde runs on tens. The cup runs on tens. Nothing unaccounted\nThe Dry Camps took it with no ledger. Hollowed out in a season\nThey sit in the ash by the old wells, mouths open, ribs counting themselves\nSome can still ride. They ride at whatever's moving\nThat's a weapon too, if you aim it\n\n[Hook: pitched-down chant]\nDrink and it hums\nStop and it hurts\nEither way you ride for me\n\n[Verse 3]\nThey say I'm high on my own supply. Let them say it\nThe ones who say it keep drinking, so it's useful\nI haven't tasted it once. Not once\nI light the lamp and I watch them taste\nEverything I do, I do clear\n\n[Outro: flat, over idling]\nRusty bit a man from the Dry Camps this morning\nNobody stopped him. He's the only one with a policy\n```\n\n## 07 Idle (target 1:30, 55 BPM)\nFile: 07-idle.mp3\n\nStyle of Music:\ndark ambient, 55 BPM, no drums, a low two-beat engine chuff as the only pulse, distant golden eagle cry, wind, one long bowed morin khuur note, close-mic'd breathing, one spoken passage in a near-whisper, no hook\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: No beat at all. The whispered passage is intelligible. If Suno sings it, use the fallback in the brief.\n\nLyrics:\n```\n[Intro: a hundred thousand engines idling in grass, wind, one eagle call far above]\n\n[Spoken, close, almost breath]\nDawn\nA hundred thousand engines idling in the grass\nThe sound of a field breathing through its teeth\nEagle on my wrist. She weighs what a child weighs\nShe's looking at something that doesn't know yet it's food\nTwenty days west, a man killed my caravan\nI'm not angry. I'm looking at the eagle\nNobody speaks. Nobody coughs\nFour in. Hold. Four out\nCount them\n\n[Outro: engines idle, a single bark, cut off]\n```\n\n## 08 The Cistern (target 4:00, 88 BPM)\nFile: 08-the-cistern.mp3\n\nStyle of Music:\nepic dark hip hop, 88 BPM building, war-drum toms, an engine roar swelling under the hook, low brass drone, deadpan narration getting colder as it escalates, a near-silent breakdown before the last verse\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The structure builds. The breakdown before verse 3 is nearly silent. The dog drinking line lands.\n\nLyrics:\n```\n[Intro: a hundred thousand engines shutting off one by one, then silence, then water dripping]\n\n[Verse 1]\nFour hundred and fifty of mine in his book\nMerchants. Wool and silk. He wrote spies. He wrote it with a seal\nI sent a man to ask for the killer\nThey burned the beards off two and killed the one who spoke\nI wasn't angry. I counted the water between us\nA canal, a cistern, a city that drinks the same thing every dawn\n\n[Hook]\nNineteen mornings\nSame cistern, same cup\nThe gates came open from the inside\n\n[Verse 2]\nThe last tanker went up the canal in the dark\nOne drip in ten thousand. Not enough to feel\nEnough to teach the body\nDay nineteen the first of them shook at the well\nDay twenty they were at the wall, throwing their swords down for a cup\nSome of them offered their daughters\nI took the daughters. I also kept the cup\nThe dog drank first. Nothing. The dog is impossible to impress\n\n[Hook]\nNineteen mornings\nSame cistern, same cup\nThe gates came open from the inside\n\n[Verse 3: near-silent breakdown]\nInalchuq asked for silver. He'd earned a hall of it\nI had the caravan's own coin melted in the same pot as the glass\nHe wanted silver. I'm generous\nEyes first. Then the ears, so he'd hear it\nBrim full. He had all of it\n\n[Outro: spoken, flat]\nFive months, they wrote. It was three weeks\nThe rest is what you tell people so they don't ask about the water\n```\n\n## 09 Nice House, Shame About the Fire (target 3:10, 96 BPM)\nFile: 09-nice-house-shame-about-the-fire.mp3\n\nStyle of Music:\nswaggering menacing hip hop diss, 96 BPM, bouncy but cold, tuba-like sub bass, brass stabs, a bucket clanging for percussion, the Khan sounds amused for the first time on the album, mocking half-sung hook with the same deadpan underneath\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The Khan sounds amused. The shouted line drops the beat out. The hook is mocking but still deadpan.\n\nLyrics:\n```\n[Intro: a bucket clanging, a Roman-style horn, engines, the dog]\n\n[Verse 1]\nMan from the house of Crassus came to my burning camp\nBought the name with the business, same as buying a seat\nForty men, forty buckets, a silk-lined smile\nSaid four hundred denarii, Khan, for the lot, while it burns\nI'll put it out and you'll walk away with coin\nPolite. Rehearsed. He's said it to a hundred widows\n\n[Hook: mocking, half-sung]\nNice house\nShame about the fire\nYou sell the cure\nI sell the sickness and the cure\n\n[Verse 2]\nI let him finish. I let him say the number twice\nThen I told him who lit it. It's my grass. I light what I like\nI wanted to see who came running with a bucket\nA whole house that lives on someone else's worst day\nI didn't hit him. I bought his crew\nOne cup each. The black. Forty men, forty cups\nBy dusk his men were mine and his buckets were mine\nThe fire was out because I said it was\n\n[Verse 3]\nYour people lined a road with six thousand to make a point\nA whole road of men. Expensive. Slow\nI needed one. A groom on a frame. The point's the same\nNobody leaves it cold\nThen I rode to his house in Bukhara. The fire was already going\nStood in the road and offered him four coins for the lot\nWhile it burned. He took them. He had no crew left to say no\n\n[Snap: shouted, beat drops out]\nSAY IT. SAY NICE HOUSE\n\n[Flat]\nHe said it\nThe dog pissed on his boots. I didn't stop him\n\n[Hook: mocking, half-sung]\nNice house\nShame about the fire\nYou sell the cure\nI sell the sickness and the cure\n\n[Outro: spoken, amused]\nNice house\n```\n\n## 10 The Great Silence (target 3:30, 60 BPM)\nFile: 10-the-great-silence.mp3\n\nStyle of Music:\nslow ominous cinematic outro, 60 BPM, engines idling as the only drums, shutting off one at a time across the track, throat-singing pad, one long morin khuur note, flat tired narration with no flourish, final twenty seconds just wind and a dog\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The engines drop out one at a time. The last twenty seconds are only wind and one bark. 'Somebody didn't' is spoken, not sung.\n\nLyrics:\n```\n[Intro: engines idling, one by one shutting off]\n\n[Verse 1]\nI fell, or I was sick, or a woman did it. Pick\nNobody knows. That's the plan. The cause went quiet quick\nWestern Xia, summer, the year I lost the count\nThe order was written before the fever, the date left blank\n\n[Verse 2]\nBury the engines with me, every one that can be found\nMelt down the rest. The smiths go in the ground\nThe escort that carries me kills what it meets\nThen the escort is killed. Then those who killed the escort. Then the streets\nGo quiet. Then the river's turned across the place\nLeave the horses. Let the horses take the praise\n\n[Hook: low, chanted]\nWrite nothing down\nWrite nothing down\nLet them say fast horsemen\n\n[Verse 3]\nEight hundred years and nobody's found the grave\nThat's the last trick of the engines: they keep the quiet I gave\nThey scraped my name off the iron and wrote it in the grass\nThey call it a miracle of cavalry. They call it fast\nIt was never the horses\n\n[Spoken, flat]\nThe order was: burn every page that says what ran under us\nIf you're hearing this\nSomebody didn't\n\n[Outro: wind, one dog barking at the dirt, then cut]\n```\n"}, {"id": "images", "title": "Images", "md": "# IMAGES: 14 files\n\n## Style bible (put this in front of every prompt)\nScorched woodcut meets risograph print on cracked felt and rusted sheet iron. Palette limited to ash black, rust orange, bone white and hazard yellow, with rare lightning-glass cyan as the only accent. Heavy film grain, hard directional light, dust haze, slight print misregistration. Thirteenth-century steppe silhouettes fused with improvised iron engine-horses: riveted plates, piston rods, bronze lungs, horsehair belts, felt seals. Bleak, cinematic, no glamour. No text, letters, numbers, logos, signatures or watermarks anywhere in the image. No real-person likenesses. No imagery from any existing film, game or comic. No graphic gore: show aftermath as silhouette or implication.\n\n## Rules\n- Track images are 4:5, 1080x1350 or larger, saved as JPG at quality 88 or higher, named track-NN.jpg.\n- Keep the same palette, grain and print texture across the whole set so they read as one record.\n- Leave the lower third visually quiet. The lyric reel sits over it.\n- Never include lettering of any kind. The player adds all text.\n- No graphic gore. Where a prompt mentions violence, show it as a distant silhouette or implication.\n\n## track-01.jpg  (Marmot Winter)\nRatio 4:5, 1080x1350 or larger.\nA nine-year-old boy asleep curled against the flank of a dead, snow-drifted iron engine-horse, one palm resting flat on its cold plating, a single weak ember glowing inside its chest, blizzard, a tiny dog silhouette in the far distance.\n\n## track-02.jpg  (The Fish)\nRatio 4:5, 1080x1350 or larger.\nA silver fish lying on a flat grey stone in cold snow-light, a small hand reaching for it from the left, two long shadows of older youths holding bows falling across the stone from the right, a ragged dog sniffing at the fish head in the corner.\n\n## track-03.jpg  (Warm the Engine)\nRatio 4:5, 1080x1350 or larger.\nDawn over a felt-tent camp, a hand pressed flat on the cold riveted bronze lung of an iron engine-horse with breath-steam rising, far in the high background a single small silhouette hung on a wooden cross-frame against the pale sun, seen only as a distant shape, a dog barking at the base of the frame.\n\n## track-04.jpg  (Blood Brother)\nRatio 4:5, 1080x1350 or larger.\nTwo knucklebones resting on a black felt blanket between two pairs of sleeping hands, one cold iron engine-horse behind them, a second faint translucent pale figure sitting at the very edge of the frame, ghostly and half-erased.\n\n## track-05.jpg  (The Finger)\nRatio 4:5, 1080x1350 or larger.\nA ledger of pale birch bark under one oil lamp, columns of ink tally marks, nine dark standing silhouettes around the lamp on felt walls, a dog's nose entering the frame from the bottom edge. No blood.\n\n## track-06.jpg  (Airag-Black)\nRatio 4:5, 1080x1350 or larger.\nA clay cup of perfectly black liquid on a flat stone, jagged shards of glowing cyan lightning-glass around it, the black surface reflecting a hundred rider silhouettes, thin hollow figures sitting in grey ash at the far edge.\n\n## track-07.jpg  (Idle)\nRatio 4:5, 1080x1350 or larger.\nA golden eagle perched on a leather-gauntleted wrist in sharp foreground, breath-steam in cold air, behind it a vast field of a hundred thousand idling iron engine-horses stretching to the horizon at dawn, exhaust haze lying over them like a lake.\n\n## track-08.jpg  (The Cistern)\nRatio 4:5, 1080x1350 or larger.\nA vast stone cistern of black water under a night sky, the reflection of a walled city wall rippling in it, tanker barrels on a canal in the foreground, a single scruffy dog lapping at the water's edge, unbothered.\n\n## track-09.jpg  (Nice House, Shame About the Fire)\nRatio 4:5, 1080x1350 or larger.\nA burning villa on a ridge at dusk, a silk-robed broker standing in front of it beside forty buckets lined up in rows, a ridge of riders on iron engine-horses behind him in silhouette, a scruffy dog at the broker's feet.\n\n## track-10.jpg  (The Great Silence)\nRatio 4:5, 1080x1350 or larger.\nA river turned out of its bed across an unmarked stretch of steppe grass at dusk, the rear of an iron engine-horse barely visible under the turf, wide empty plain, wind, a tiny dog silhouette barking at the dirt.\n\n## cover.jpg\nRatio 1:1, 3000x3000.\nAlbum cover art: a black sun above a tall spear topped with nine hanging horsehair tails, below it the silhouette of a single iron engine-horse, centred, symmetrical, woodcut-risograph print in rust and bone on black. Leave the lower fifth empty for later lettering.\n\n## hero.jpg\nRatio 16:9, 3840x2160.\nA convoy of riders on iron engine-horses crossing a dust-choked steppe at dusk beneath an enormous black sun, long shadows, nine-tailed standards streaming behind them, dust haze in layers.\n\n## khan.png\nRatio 3:4, 2400x3200.\nA hooded rider on an iron engine-horse, face entirely in shadow, nine-tailed standard behind, seen from slightly below, transparent background. A fictional silhouette with no recognisable real-person likeness.\n\n## rusty.png\nRatio 1:1, 1600x1600.\nSticker-style illustration of an ugly, annoying rust-coloured mutt mid-bark, matted fur, one ear up, mouth open, transparent background, thick bone-coloured outline.\n"}, {"id": "loops", "title": "Loops", "md": "# LOOPS: eleven short videos\n\n## Rules\n- Take each track image and animate it with an image-to-video tool. Name the result loop-NN.mp4. The idle master is loop-idle.mp4.\n- Length 5 seconds. 24 fps. Same ratio as the source image. H.264, yuv420p, no audio track, under 6 MB.\n- The loop must be seamless: the first and last frame match. If the tool cannot do that, export forward then reversed (ping-pong) and join them.\n- Keep motion low and slow. Smoke, embers, breath, flicker, wind, ripples. The lyrics sit on top and must stay readable.\n- Camera locked off or a very slow push-in. No cuts. No on-screen text. No new characters appearing.\n- Never animate gore. Keep the distant silhouettes still.\n\n## loop-01.mp4  (from track-01.jpg)\nSnow blows sideways across the frame, the ember in the engine's chest pulses slowly, the boy's breath steams, camera locked off.\n\n## loop-02.mp4  (from track-02.jpg)\nLight slides across the fish scales, the two bow shadows lengthen slowly, the dog's nose twitches toward the fish, a very slow push-in.\n\n## loop-03.mp4  (from track-03.jpg)\nSteam rises from the bronze lung, dawn light creeps across the iron, the distant silhouette stays perfectly still, the dog's mouth moves, camera locked off.\n\n## loop-04.mp4  (from track-04.jpg)\nThe ghost figure flickers in and out of transparency, the knucklebones tremble slightly, wind ripples the felt, camera locked off.\n\n## loop-05.mp4  (from track-05.jpg)\nThe lamp flame flickers and the nine shadows sway on the felt wall, the dog's nose twitches at the bottom edge, camera locked off.\n\n## loop-06.mp4  (from track-06.jpg)\nThe black liquid ripples from inside, the cyan glass shards pulse softly, the reflected riders shimmer, camera locked off.\n\n## loop-07.mp4  (from track-07.jpg)\nExhaust haze drifts slowly across the field of engines, the eagle ruffles its feathers and turns its head slightly, breath-steam rises, camera locked off.\n\n## loop-08.mp4  (from track-08.jpg)\nThe black water surface ripples, torchlight flickers on the reflected city wall, the dog laps steadily, camera locked off.\n\n## loop-09.mp4  (from track-09.jpg)\nVilla fire flickers, embers rise into the dusk, the broker's robes ripple in the heat, the riders shift on the ridge, the dog sniffs at the buckets.\n\n## loop-10.mp4  (from track-10.jpg)\nWind combs the grass, light glints on the diverted river, the tiny dog barks and shifts, dust drifts, a very slow push-in.\n\n## loop-idle.mp4  (from hero.jpg)\nA wide shot of a hundred thousand iron engine-horses idling at dawn, exhaust steam drifting across the whole field, slow wind, the black sun low on the horizon, camera locked off.\n\n# KINETIC LYRIC GIFS (optional, one per track)\n\nFor each track make a 4 second looping square (720x720) of the hook line below as animated type: stencil capitals, bone on black, burning edges, glitching in sync with the beat. The first and last frame match. Name them gif-NN.gif.\n\n- gif-01.gif: NOBODY FEEDS YOU TWICE\n- gif-02.gif: IT WAS A SMALL FISH\n- gif-03.gif: NOBODY RIDES A COLD ONE\n- gif-04.gif: ANDA. COME AND SIT DOWN.\n- gif-05.gif: CARRY THE ONE\n- gif-06.gif: DRINK AND IT HUMS. STOP AND IT HURTS.\n- gif-07.gif: COUNT THEM.\n- gif-08.gif: THE GATES CAME OPEN FROM THE INSIDE\n- gif-09.gif: NICE HOUSE. SHAME ABOUT THE FIRE.\n- gif-10.gif: WRITE NOTHING DOWN.\n\nThe player also has a LOOP LAB that records these itself. Use that if your tools cannot make a GIF.\n"}, {"id": "wiring", "title": "Wiring", "md": "# WIRING: where every file goes\n\n## Folder tree (next to index.html)\n```\nindex.html\nassets/\n  audio/\n    01-marmot-winter.mp3\n    02-the-fish.mp3\n    ...\n    10-the-great-silence.mp3\n    alt/                (runner-up takes)\n  img/\n    cover.jpg  hero.jpg  khan.png  rusty.png\n    track-01.jpg ... track-10.jpg\n  loop/\n    loop-01.mp4 ... loop-10.mp4\n    loop-idle.mp4\n```\nThe page looks for these exact paths on load. A lit A, I or V lamp on the cargo manifest means that file was found.\n\n## Drag and drop (no folder needed)\nDrop files onto the page, or press Load files. The page matches by name:\n- Audio: any audio file with the track number in the name (01-anything.mp3).\n- Images: cover, hero, khan, rusty by word; otherwise the first number in the name is the track.\n- Video: idle or master by word; otherwise the first number in the name is the track.\nDropped files only last until the page is reloaded. For a permanent build, use the folder tree.\n\n## Filling the blanks in the file\nNear the top of the script there is one object called ALBUM. Every track has four blanks:\n- audio, img and loop: change the path if your file lives somewhere else.\n- timings: an array of start times in seconds, one per lyric line, in order. Leave it empty to spread the lyrics over the track length automatically.\n\n## Syncing the lyrics to the real audio (do this once per track)\n1. Load the track and press Sync tap.\n2. Press play. Press MARK on the first sung word of each line as it is spoken.\n3. Press Copy timings. Paste the array into that track's timings field in ALBUM.\n\n## Hosting\nOpen index.html in a browser, or put the folder on any static host. If the page is uploaded to an environment that blocks remote media, use the folder tree and relative paths, not links to other sites.\n"}, {"id": "qa", "title": "QA", "md": "# QA checklist\n\n- [ ] All 10 audio files play, in order, with no clipping.\n- [ ] Track 5: the beat drops out fully for the single shouted line and returns identically.\n- [ ] Track 7: the whispered passage is intelligible and there is no beat.\n- [ ] Track 10: the last twenty seconds are only wind and one dog bark.\n- [ ] The dog is audible somewhere in tracks 1, 2, 3, 5, 6, 7, 8, 9 and 10, and silent at the ghost in track 4.\n- [ ] No lyric was changed. Run a text diff against the brief.\n- [ ] No text, logos or watermarks in any image or loop.\n- [ ] Every loop is exactly 5 seconds and the seam is invisible.\n- [ ] Every track has an A, I and V lamp lit on the cargo manifest.\n- [ ] Lyrics are synced within half a second on every track (Sync tap).\n- [ ] The page works on a phone: ignition button, seek, next, brief panel.\n- [ ] Report: table of file, status, notes, and a list of anything not done.\n"}], "full": "# PASTE THIS FIRST\n\nYou are the production bot for an album called THE KHAN OF THE BLACK STEPPE. Read the whole attached brief first. Work in this order: (1) generate the ten tracks in Suno exactly as specified, two takes each, and save the best take of each as NN-slug.mp3; (2) generate the images in the shot list with the style bible in front of every prompt, with no text in any image; (3) turn each track image into a 5 second seamless loop; (4) put every file into the folder tree in the WIRING section; (5) run the QA checklist and report back as a table of file, status and notes. Do not rewrite, reorder or soften the lyrics. Do not put the name of any existing film, franchise, game or artist in any prompt. If a tool cannot do a step, say so in the report instead of faking the file.\n\n---\n\n# Production brief: THE KHAN OF THE BLACK STEPPE\n\n## What this is\nA ten-track rap album narrated in the first person by Genghis Khan, in an alternate history where the Mongol horde rode iron engine-horses fuelled by distilled mare's milk, and the Khan ordered every record of them burned. The narrator is cold, flat and exact. He counts women, horses, grain and fuel in the same breath. He snaps once or twice with no warning, then goes flat again. A dog called Rusty is in the background of everything and is never explained.\n\nThe album is wrapped in a single HTML player (index.html). Your job is to produce the audio, images and loops that the player loads.\n\n## Your jobs, in order\n1. Generate all ten tracks in Suno from the SUNO section.\n2. Generate the images in the IMAGES section.\n3. Turn each track image into a 5 second seamless loop (LOOPS section).\n4. Place every file as shown in WIRING, then open index.html and run the QA checklist.\n5. Report back as a table: file, status, notes.\n\n## Hard rules\n- The lyrics are final. Do not rewrite, reorder, add or soften anything. Paste them exactly, including the bracket tags.\n- If Suno refuses a line, change only the offending verb, log the change in your report, and keep the delivery flat.\n- Do not put the name of any existing film, franchise, game or artist in any prompt.\n- No text inside any image or video.\n- No real-person likenesses.\n- Keep the best two takes per track. Best goes to assets/audio/, runner-up to assets/audio/alt/.\n- If a tool cannot do a step, say so. Do not fake the file.\n\n\n---\n\n# SUNO: ten tracks\n\n## Settings for every track\n- Model: the newest available.\n- Mode: Custom.\n- Vocal: male. Instrumental: off.\n- Weirdness: 45 to 55. Style influence: 65 to 75.\n- Paste the Style block into Style of Music. Paste the Exclude block into Exclude styles. Paste the lyrics block into Lyrics, exactly as written, brackets included.\n- Generate at least two takes per track. Pick by the line under \"Pick the take where\".\n- Name each file NN-slug.mp3 (for example 01-marmot-winter.mp3).\n\n## Fallback for Track 7 (Idle)\nIdle is mostly spoken. If Suno sings the spoken part, generate it as an instrumental with the same style block, then record the spoken passage separately (a plain close-mic voice, no music) and mix it over the top. Keep the final under 1:45.\n\n## Fallback for spoken outros\nIf a take sings a part marked spoken, add \"spoken word, monotone\" to the style for that run.\n\n## 01 Marmot Winter (target 3:10, 78 BPM)\nFile: 01-marmot-winter.mp3\n\nStyle of Music:\ndark industrial boom-bap, slow 78 BPM, sub bass like a diesel idling, morin khuur drone, low throat-singing underneath, wind noise, sparse metallic hi-hat like a cooling engine ticking, deadpan male rap vocal, flat and close-mic'd, no autotune, cinematic and bleak\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: Vocal is flat and close. Wind is audible. The dog bark is in the first second and the outro.\n\nLyrics:\n```\n[Intro: wind, an engine ticking as it cools, a dog barking too close and too long]\n\n[Verse 1]\nMy father ate at an enemy's fire because he was polite\nThe meat had a second ingredient, he lasted three nights\nThe clan sat down and did the sum on us\nA widow and her litter and no iron worth the fuss\nThey took the tents, they took the herd, they took the engines off the line\nLeft us one on its side in the snow. I was nine. It was mine\nEight mouths, one marmot, and I held the knife\nFat to the ones who'd be useful by spring\nThe small one coughed so I moved him by the door\nWhere the draught is. Nobody said anything\n\n[Hook]\nNobody feeds you twice\nYou eat what the winter leaves\nWarm it with your hands till it forgives you\nNobody feeds you twice\n\n[Verse 2]\nI slept with my back to the block that whole season\nCold as a cellar, then a tick, then a knock, no reason\nPalms flat on the iron till the iron learned my name\nThe only thing that stayed was the thing that I made breathe\nMother dug up onions, taught us which roots wouldn't kill\nI kept a list of the families who watched us leave the hill\nNot a grudge. A ledger. Names are numbers with a face\nA debt doesn't go bad, it just waits in its place\n\n[Hook]\nNobody feeds you twice\nYou eat what the winter leaves\nWarm it with your hands till it forgives you\nNobody feeds you twice\n\n[Outro: spoken, flat]\nSomewhere a dog was barking at the snow\nIt never stopped. I never asked whose\n```\n\n## 02 The Fish (target 2:50, 70 BPM)\nFile: 02-the-fish.mp3\n\nStyle of Music:\nstripped minimal boom-bap, 70 BPM, dull kick like a fist on felt, single bowed morin khuur stabs, one arrow-whistle effect, deadpan low rap, whispered doubles on the hook, dry close room, tense and restrained\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: Hook doubles are whispered. No melodic singing anywhere. The dog is audible near the intro.\n\nLyrics:\n```\n[Intro: a fish slapping on a flat stone, an engine ticking, a dog very interested]\n\n[Verse 1]\nSilver, no longer than my hand\nPulled it through the ice myself, cooked it on a stone\nBegter ate it. Older. Another woman's son\nEight of us, one fish. He did the sum alone\nI went to Mother. Mother said stop fighting\nI went out the door. I wasn't fighting\nKhasar took the bow. I took the patience\nHill with the horses. He saw us coming. He sat\n\n[Hook: whispered doubles]\nIt was a small fish\nCount it, one fish, one brother\nIt was a small fish\n\n[Verse 2]\nHe didn't run. He knew the look. He'd worn it first\nSat on his heels and asked for one thing, one thing only\nLeave Belgutei. That was the whole request\nSo I left Belgutei. I keep my word when it's free\nArrow from the front, arrow from behind\nWe don't discuss the hill, we discuss the horses\nWalked home. Mother's face was weather\nShe called us every animal she'd been saving up\nThe dog that eats its own afterbirth\nThe wolf that can't tell a pack from a meal\nI ate. The dog got the head\n\n[Hook: whispered doubles]\nIt was a small fish\nCount it, one fish, one brother\nIt was a small fish\n\n[Outro: spoken, flat]\nNobody took my food again\nFair is expensive. The other thing is cheap\nI haven't been short of fish since\n```\n\n## 03 Warm the Engine (target 3:20, 84 BPM)\nFile: 03-warm-the-engine.mp3\n\nStyle of Music:\nmid-tempo industrial hip hop, 84 BPM, rhythm built from engine ticks, bellows hiss and a hammer on iron, felt-muted kick, low brass drone, deadpan rap like a man reading a checklist, spoken-sung hook, sparse and gritty, nothing warm in the mix\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: Hook is spoken-sung, not sung. The groom verse stays completely flat. The last word is 'Breakfast' over idling.\n\nLyrics:\n```\n[Intro: bellows, a latch, the dog, a boy's voice far off asking someone to please]\n\n[Verse 1]\nWake. Move the girl off the arm that holds the reins\nSame as lifting a saddle blanket. Piss. Tea with fat\nCount: forty mares, nine hundred sacks of grain, six girls, fuel\nTwo of them are new. Nobody's told me their names, which saves time\n\n[Verse 2]\nHands on the iron. Palm flat. It's cold. It's always cold\nTallow in the joints, felt in the seals\nWarm the lung with breath, tap the bronze, listen\nYou talk to it low. Not words. The sound a mother makes\nThen the tick. Then the knock. Then the shudder up your spine\nA hundred more answering down the line\nThat's the day starting\n\n[Hook: spoken-sung]\nWarm the engine\nWarm the engine\nNobody rides a cold one\n\n[Verse 3]\nThe boy who kept it overnight is on the frame\nHe let the fire die. Four hours. A small thing\nLong iron spikes, the ones for the tent poles\nWrist. Wrist. Both heels through the one stay\nThe engine turns over. Heat climbs the frame\nHis hands open and shut on the nails like he's counting\nHis breath goes in pieces. Somewhere past noon the ribs stop\nChecked the belt. Checked the seal. The belt was fine\nThe dog barks at the boy. Annoying. Nobody else would\n\n[Hook: spoken-sung]\nWarm the engine\nWarm the engine\nNobody rides a cold one\n\n[Outro: spoken, flat, over idling]\nBreakfast\n```\n\n## 04 Blood Brother (target 3:40, 68 BPM)\nFile: 04-blood-brother.mp3\n\nStyle of Music:\nsparse dark hip hop, 68 BPM, bowed morin khuur, knucklebones rattled for percussion, slow kick, long sub swells, reverb-soaked whispered ghost vocal answering a flat deadpan lead, duet feel but never harmonised, funereal\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The ghost voice is clearly different from the lead. Knucklebone percussion is audible. The dog is silent in verse 3.\n\nLyrics:\n```\n[Intro: two knucklebones rattled in a palm, then dropped]\n\n[Verse 1: Khan]\nEleven winters old on the frozen river\nTraded knucklebones and said the word. Anda\nOne blanket. One bowl. One cold engine between us\nWe took turns warming it. You always took the longer turn\nYou were better at sleeping. That was the first thing you were better at\n\n[Hook: Khan, quiet]\nAnda\nCome and sit down\nAnda\n\n[Verse 2: Khan]\nYou boiled seventy of theirs in iron pots\nYour own men watched and did the math on what they'd got\nThey slipped out in the night and tied you up by morning\nCarried you in to me like a fish, no warning\nI killed the ones who carried you\nA man who sells his lord is a price with a mouth\nI stood you up. I said stay. I said we'll warm it together like before\nYou said one sky can't hold two suns\nYou said it kindly. That was worse\n\n[Ghost: whispered]\nLet none of me touch the ground\nLet the sky see nothing\n\n[Verse 3: Khan]\nI gave you what you asked. I give the dead what they ask. It's cheap\nNo blood on the earth. Back first, then the rest\nFelt and horses and a long time\nI stayed. Someone should know how long it takes\nYour bones went to the high ground with honour\nThe dog doesn't bark at the empty place where you sit\nThe only place he doesn't\n\n[Hook: Khan, quiet]\nAnda\nCome and sit down\nAnda\n\n[Outro: Ghost, whispered]\nI kept it warm for you\nYou woke warm\nYou never asked who\n\n[Khan, flat]\nCount the horses\n```\n\n## 05 The Finger (target 2:30, 92 BPM)\nFile: 05-the-finger.mp3\n\nStyle of Music:\nminimal industrial trap, 92 BPM, tense and tidy, ledger-scratch percussion, one sustained low drone, the beat stutters and drops out completely for the shouted line then returns exactly as before, flat deadpan rap with one sudden unhinged shout, then flat again as if nothing happened\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The beat drops out fully for the shout and returns identically. The shout is a single line. Everything else is flat.\n\nLyrics:\n```\n[Intro: a brush on birch bark, ink, a dog sniffing at something]\n\n[Verse 1: flat, counting]\nGrain: four hundred sacks. Mares: eleven hundred, forty with foal\nEngines: nine hundred and sixty. Six in the shop. Two that won't\nWomen: two hundred and ten. Forty of them Merkit, counted at the river\nBörte is not on this list. Börte is on a different list\nThey took her in the night. I took her back in spring\nShe came with an extra mouth already on the way\nI named him Guest. That's what the word means. I wasn't being clever\nNobody at the table said a word. Good\n\n[Hook: flat]\nCarry the one\nCarry the one\nTen on the ledger. Carry the one\n\n[Verse 2: flat, steady]\nNine men around the felt, one lamp, the maps\nBo'orchu asks about the river road\nI answer. I'm calm. The water's three days, the grass is two\nThe lamp doesn't move. Nobody moves\nAnd then\n\n[Snap: shouted, beat drops out, one line]\nWHOSE HANDS ARE THESE\n\n[Verse 3: flat, fast, tidy]\nThe small one. The left. One cut\nLaid it on the ledger like a tally mark\nNobody looked. Bo'orchu held his face like a bowl that's too full\nThe dog took it off the felt. I let him\nFirst thing he's done I approved\nWrapped the hand. Finished the count\nMine. Count them\n\n[Hook: flat]\nCarry the one\nCarry the one\nNine on the ledger. Carry the one\n```\n\n## 06 Airag-Black (target 3:15, 100 BPM)\nFile: 06-airag-black.mp3\n\nStyle of Music:\nhypnotic dark trap with industrial pulse, 100 BPM half-time, sub bass that idles like an engine, throat-singing pad, pitched-down chant on the hook, sticky and mean, cold deadpan verses that lean into a melodic hook, sparse but heavy\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The hook is the catchiest thing on the album. The chant is pitched down. The verses stay deadpan.\n\nLyrics:\n```\n[Intro: a lightning crack, glass breaking underfoot, a pot beginning to simmer]\n\n[Verse 1]\nMare's milk, three days in the skin, turn it every hour\nRun it through the clay still until it's clear as a lie\nThen the glass. Lightning glass, where the sky hit the sand and left a root\nGrind it fine as flour, stir it in, it goes black as a well\nOne cup and you feel the engine through your spine\nTwo cups and you hear what it wants\n\n[Hook: pitched-down chant]\nDrink and it hums\nStop and it hurts\nEither way you ride for me\n\n[Verse 2]\nRation by rank. The dose is on the ledger\nNobody drinks alone. Nobody drinks at night\nTen to a unit, the tenth man holds the flask, the nine watch the tenth\nThe horde runs on tens. The cup runs on tens. Nothing unaccounted\nThe Dry Camps took it with no ledger. Hollowed out in a season\nThey sit in the ash by the old wells, mouths open, ribs counting themselves\nSome can still ride. They ride at whatever's moving\nThat's a weapon too, if you aim it\n\n[Hook: pitched-down chant]\nDrink and it hums\nStop and it hurts\nEither way you ride for me\n\n[Verse 3]\nThey say I'm high on my own supply. Let them say it\nThe ones who say it keep drinking, so it's useful\nI haven't tasted it once. Not once\nI light the lamp and I watch them taste\nEverything I do, I do clear\n\n[Outro: flat, over idling]\nRusty bit a man from the Dry Camps this morning\nNobody stopped him. He's the only one with a policy\n```\n\n## 07 Idle (target 1:30, 55 BPM)\nFile: 07-idle.mp3\n\nStyle of Music:\ndark ambient, 55 BPM, no drums, a low two-beat engine chuff as the only pulse, distant golden eagle cry, wind, one long bowed morin khuur note, close-mic'd breathing, one spoken passage in a near-whisper, no hook\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: No beat at all. The whispered passage is intelligible. If Suno sings it, use the fallback in the brief.\n\nLyrics:\n```\n[Intro: a hundred thousand engines idling in grass, wind, one eagle call far above]\n\n[Spoken, close, almost breath]\nDawn\nA hundred thousand engines idling in the grass\nThe sound of a field breathing through its teeth\nEagle on my wrist. She weighs what a child weighs\nShe's looking at something that doesn't know yet it's food\nTwenty days west, a man killed my caravan\nI'm not angry. I'm looking at the eagle\nNobody speaks. Nobody coughs\nFour in. Hold. Four out\nCount them\n\n[Outro: engines idle, a single bark, cut off]\n```\n\n## 08 The Cistern (target 4:00, 88 BPM)\nFile: 08-the-cistern.mp3\n\nStyle of Music:\nepic dark hip hop, 88 BPM building, war-drum toms, an engine roar swelling under the hook, low brass drone, deadpan narration getting colder as it escalates, a near-silent breakdown before the last verse\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The structure builds. The breakdown before verse 3 is nearly silent. The dog drinking line lands.\n\nLyrics:\n```\n[Intro: a hundred thousand engines shutting off one by one, then silence, then water dripping]\n\n[Verse 1]\nFour hundred and fifty of mine in his book\nMerchants. Wool and silk. He wrote spies. He wrote it with a seal\nI sent a man to ask for the killer\nThey burned the beards off two and killed the one who spoke\nI wasn't angry. I counted the water between us\nA canal, a cistern, a city that drinks the same thing every dawn\n\n[Hook]\nNineteen mornings\nSame cistern, same cup\nThe gates came open from the inside\n\n[Verse 2]\nThe last tanker went up the canal in the dark\nOne drip in ten thousand. Not enough to feel\nEnough to teach the body\nDay nineteen the first of them shook at the well\nDay twenty they were at the wall, throwing their swords down for a cup\nSome of them offered their daughters\nI took the daughters. I also kept the cup\nThe dog drank first. Nothing. The dog is impossible to impress\n\n[Hook]\nNineteen mornings\nSame cistern, same cup\nThe gates came open from the inside\n\n[Verse 3: near-silent breakdown]\nInalchuq asked for silver. He'd earned a hall of it\nI had the caravan's own coin melted in the same pot as the glass\nHe wanted silver. I'm generous\nEyes first. Then the ears, so he'd hear it\nBrim full. He had all of it\n\n[Outro: spoken, flat]\nFive months, they wrote. It was three weeks\nThe rest is what you tell people so they don't ask about the water\n```\n\n## 09 Nice House, Shame About the Fire (target 3:10, 96 BPM)\nFile: 09-nice-house-shame-about-the-fire.mp3\n\nStyle of Music:\nswaggering menacing hip hop diss, 96 BPM, bouncy but cold, tuba-like sub bass, brass stabs, a bucket clanging for percussion, the Khan sounds amused for the first time on the album, mocking half-sung hook with the same deadpan underneath\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The Khan sounds amused. The shouted line drops the beat out. The hook is mocking but still deadpan.\n\nLyrics:\n```\n[Intro: a bucket clanging, a Roman-style horn, engines, the dog]\n\n[Verse 1]\nMan from the house of Crassus came to my burning camp\nBought the name with the business, same as buying a seat\nForty men, forty buckets, a silk-lined smile\nSaid four hundred denarii, Khan, for the lot, while it burns\nI'll put it out and you'll walk away with coin\nPolite. Rehearsed. He's said it to a hundred widows\n\n[Hook: mocking, half-sung]\nNice house\nShame about the fire\nYou sell the cure\nI sell the sickness and the cure\n\n[Verse 2]\nI let him finish. I let him say the number twice\nThen I told him who lit it. It's my grass. I light what I like\nI wanted to see who came running with a bucket\nA whole house that lives on someone else's worst day\nI didn't hit him. I bought his crew\nOne cup each. The black. Forty men, forty cups\nBy dusk his men were mine and his buckets were mine\nThe fire was out because I said it was\n\n[Verse 3]\nYour people lined a road with six thousand to make a point\nA whole road of men. Expensive. Slow\nI needed one. A groom on a frame. The point's the same\nNobody leaves it cold\nThen I rode to his house in Bukhara. The fire was already going\nStood in the road and offered him four coins for the lot\nWhile it burned. He took them. He had no crew left to say no\n\n[Snap: shouted, beat drops out]\nSAY IT. SAY NICE HOUSE\n\n[Flat]\nHe said it\nThe dog pissed on his boots. I didn't stop him\n\n[Hook: mocking, half-sung]\nNice house\nShame about the fire\nYou sell the cure\nI sell the sickness and the cure\n\n[Outro: spoken, amused]\nNice house\n```\n\n## 10 The Great Silence (target 3:30, 60 BPM)\nFile: 10-the-great-silence.mp3\n\nStyle of Music:\nslow ominous cinematic outro, 60 BPM, engines idling as the only drums, shutting off one at a time across the track, throat-singing pad, one long morin khuur note, flat tired narration with no flourish, final twenty seconds just wind and a dog\n\nExclude styles:\npop, upbeat, happy, autotune, auto-tuned singing, EDM drop, choir, ballad, acoustic guitar strumming\n\nPick the take where: The engines drop out one at a time. The last twenty seconds are only wind and one bark. 'Somebody didn't' is spoken, not sung.\n\nLyrics:\n```\n[Intro: engines idling, one by one shutting off]\n\n[Verse 1]\nI fell, or I was sick, or a woman did it. Pick\nNobody knows. That's the plan. The cause went quiet quick\nWestern Xia, summer, the year I lost the count\nThe order was written before the fever, the date left blank\n\n[Verse 2]\nBury the engines with me, every one that can be found\nMelt down the rest. The smiths go in the ground\nThe escort that carries me kills what it meets\nThen the escort is killed. Then those who killed the escort. Then the streets\nGo quiet. Then the river's turned across the place\nLeave the horses. Let the horses take the praise\n\n[Hook: low, chanted]\nWrite nothing down\nWrite nothing down\nLet them say fast horsemen\n\n[Verse 3]\nEight hundred years and nobody's found the grave\nThat's the last trick of the engines: they keep the quiet I gave\nThey scraped my name off the iron and wrote it in the grass\nThey call it a miracle of cavalry. They call it fast\nIt was never the horses\n\n[Spoken, flat]\nThe order was: burn every page that says what ran under us\nIf you're hearing this\nSomebody didn't\n\n[Outro: wind, one dog barking at the dirt, then cut]\n```\n\n\n---\n\n# IMAGES: 14 files\n\n## Style bible (put this in front of every prompt)\nScorched woodcut meets risograph print on cracked felt and rusted sheet iron. Palette limited to ash black, rust orange, bone white and hazard yellow, with rare lightning-glass cyan as the only accent. Heavy film grain, hard directional light, dust haze, slight print misregistration. Thirteenth-century steppe silhouettes fused with improvised iron engine-horses: riveted plates, piston rods, bronze lungs, horsehair belts, felt seals. Bleak, cinematic, no glamour. No text, letters, numbers, logos, signatures or watermarks anywhere in the image. No real-person likenesses. No imagery from any existing film, game or comic. No graphic gore: show aftermath as silhouette or implication.\n\n## Rules\n- Track images are 4:5, 1080x1350 or larger, saved as JPG at quality 88 or higher, named track-NN.jpg.\n- Keep the same palette, grain and print texture across the whole set so they read as one record.\n- Leave the lower third visually quiet. The lyric reel sits over it.\n- Never include lettering of any kind. The player adds all text.\n- No graphic gore. Where a prompt mentions violence, show it as a distant silhouette or implication.\n\n## track-01.jpg  (Marmot Winter)\nRatio 4:5, 1080x1350 or larger.\nA nine-year-old boy asleep curled against the flank of a dead, snow-drifted iron engine-horse, one palm resting flat on its cold plating, a single weak ember glowing inside its chest, blizzard, a tiny dog silhouette in the far distance.\n\n## track-02.jpg  (The Fish)\nRatio 4:5, 1080x1350 or larger.\nA silver fish lying on a flat grey stone in cold snow-light, a small hand reaching for it from the left, two long shadows of older youths holding bows falling across the stone from the right, a ragged dog sniffing at the fish head in the corner.\n\n## track-03.jpg  (Warm the Engine)\nRatio 4:5, 1080x1350 or larger.\nDawn over a felt-tent camp, a hand pressed flat on the cold riveted bronze lung of an iron engine-horse with breath-steam rising, far in the high background a single small silhouette hung on a wooden cross-frame against the pale sun, seen only as a distant shape, a dog barking at the base of the frame.\n\n## track-04.jpg  (Blood Brother)\nRatio 4:5, 1080x1350 or larger.\nTwo knucklebones resting on a black felt blanket between two pairs of sleeping hands, one cold iron engine-horse behind them, a second faint translucent pale figure sitting at the very edge of the frame, ghostly and half-erased.\n\n## track-05.jpg  (The Finger)\nRatio 4:5, 1080x1350 or larger.\nA ledger of pale birch bark under one oil lamp, columns of ink tally marks, nine dark standing silhouettes around the lamp on felt walls, a dog's nose entering the frame from the bottom edge. No blood.\n\n## track-06.jpg  (Airag-Black)\nRatio 4:5, 1080x1350 or larger.\nA clay cup of perfectly black liquid on a flat stone, jagged shards of glowing cyan lightning-glass around it, the black surface reflecting a hundred rider silhouettes, thin hollow figures sitting in grey ash at the far edge.\n\n## track-07.jpg  (Idle)\nRatio 4:5, 1080x1350 or larger.\nA golden eagle perched on a leather-gauntleted wrist in sharp foreground, breath-steam in cold air, behind it a vast field of a hundred thousand idling iron engine-horses stretching to the horizon at dawn, exhaust haze lying over them like a lake.\n\n## track-08.jpg  (The Cistern)\nRatio 4:5, 1080x1350 or larger.\nA vast stone cistern of black water under a night sky, the reflection of a walled city wall rippling in it, tanker barrels on a canal in the foreground, a single scruffy dog lapping at the water's edge, unbothered.\n\n## track-09.jpg  (Nice House, Shame About the Fire)\nRatio 4:5, 1080x1350 or larger.\nA burning villa on a ridge at dusk, a silk-robed broker standing in front of it beside forty buckets lined up in rows, a ridge of riders on iron engine-horses behind him in silhouette, a scruffy dog at the broker's feet.\n\n## track-10.jpg  (The Great Silence)\nRatio 4:5, 1080x1350 or larger.\nA river turned out of its bed across an unmarked stretch of steppe grass at dusk, the rear of an iron engine-horse barely visible under the turf, wide empty plain, wind, a tiny dog silhouette barking at the dirt.\n\n## cover.jpg\nRatio 1:1, 3000x3000.\nAlbum cover art: a black sun above a tall spear topped with nine hanging horsehair tails, below it the silhouette of a single iron engine-horse, centred, symmetrical, woodcut-risograph print in rust and bone on black. Leave the lower fifth empty for later lettering.\n\n## hero.jpg\nRatio 16:9, 3840x2160.\nA convoy of riders on iron engine-horses crossing a dust-choked steppe at dusk beneath an enormous black sun, long shadows, nine-tailed standards streaming behind them, dust haze in layers.\n\n## khan.png\nRatio 3:4, 2400x3200.\nA hooded rider on an iron engine-horse, face entirely in shadow, nine-tailed standard behind, seen from slightly below, transparent background. A fictional silhouette with no recognisable real-person likeness.\n\n## rusty.png\nRatio 1:1, 1600x1600.\nSticker-style illustration of an ugly, annoying rust-coloured mutt mid-bark, matted fur, one ear up, mouth open, transparent background, thick bone-coloured outline.\n\n\n---\n\n# LOOPS: eleven short videos\n\n## Rules\n- Take each track image and animate it with an image-to-video tool. Name the result loop-NN.mp4. The idle master is loop-idle.mp4.\n- Length 5 seconds. 24 fps. Same ratio as the source image. H.264, yuv420p, no audio track, under 6 MB.\n- The loop must be seamless: the first and last frame match. If the tool cannot do that, export forward then reversed (ping-pong) and join them.\n- Keep motion low and slow. Smoke, embers, breath, flicker, wind, ripples. The lyrics sit on top and must stay readable.\n- Camera locked off or a very slow push-in. No cuts. No on-screen text. No new characters appearing.\n- Never animate gore. Keep the distant silhouettes still.\n\n## loop-01.mp4  (from track-01.jpg)\nSnow blows sideways across the frame, the ember in the engine's chest pulses slowly, the boy's breath steams, camera locked off.\n\n## loop-02.mp4  (from track-02.jpg)\nLight slides across the fish scales, the two bow shadows lengthen slowly, the dog's nose twitches toward the fish, a very slow push-in.\n\n## loop-03.mp4  (from track-03.jpg)\nSteam rises from the bronze lung, dawn light creeps across the iron, the distant silhouette stays perfectly still, the dog's mouth moves, camera locked off.\n\n## loop-04.mp4  (from track-04.jpg)\nThe ghost figure flickers in and out of transparency, the knucklebones tremble slightly, wind ripples the felt, camera locked off.\n\n## loop-05.mp4  (from track-05.jpg)\nThe lamp flame flickers and the nine shadows sway on the felt wall, the dog's nose twitches at the bottom edge, camera locked off.\n\n## loop-06.mp4  (from track-06.jpg)\nThe black liquid ripples from inside, the cyan glass shards pulse softly, the reflected riders shimmer, camera locked off.\n\n## loop-07.mp4  (from track-07.jpg)\nExhaust haze drifts slowly across the field of engines, the eagle ruffles its feathers and turns its head slightly, breath-steam rises, camera locked off.\n\n## loop-08.mp4  (from track-08.jpg)\nThe black water surface ripples, torchlight flickers on the reflected city wall, the dog laps steadily, camera locked off.\n\n## loop-09.mp4  (from track-09.jpg)\nVilla fire flickers, embers rise into the dusk, the broker's robes ripple in the heat, the riders shift on the ridge, the dog sniffs at the buckets.\n\n## loop-10.mp4  (from track-10.jpg)\nWind combs the grass, light glints on the diverted river, the tiny dog barks and shifts, dust drifts, a very slow push-in.\n\n## loop-idle.mp4  (from hero.jpg)\nA wide shot of a hundred thousand iron engine-horses idling at dawn, exhaust steam drifting across the whole field, slow wind, the black sun low on the horizon, camera locked off.\n\n# KINETIC LYRIC GIFS (optional, one per track)\n\nFor each track make a 4 second looping square (720x720) of the hook line below as animated type: stencil capitals, bone on black, burning edges, glitching in sync with the beat. The first and last frame match. Name them gif-NN.gif.\n\n- gif-01.gif: NOBODY FEEDS YOU TWICE\n- gif-02.gif: IT WAS A SMALL FISH\n- gif-03.gif: NOBODY RIDES A COLD ONE\n- gif-04.gif: ANDA. COME AND SIT DOWN.\n- gif-05.gif: CARRY THE ONE\n- gif-06.gif: DRINK AND IT HUMS. STOP AND IT HURTS.\n- gif-07.gif: COUNT THEM.\n- gif-08.gif: THE GATES CAME OPEN FROM THE INSIDE\n- gif-09.gif: NICE HOUSE. SHAME ABOUT THE FIRE.\n- gif-10.gif: WRITE NOTHING DOWN.\n\nThe player also has a LOOP LAB that records these itself. Use that if your tools cannot make a GIF.\n\n\n---\n\n# WIRING: where every file goes\n\n## Folder tree (next to index.html)\n```\nindex.html\nassets/\n  audio/\n    01-marmot-winter.mp3\n    02-the-fish.mp3\n    ...\n    10-the-great-silence.mp3\n    alt/                (runner-up takes)\n  img/\n    cover.jpg  hero.jpg  khan.png  rusty.png\n    track-01.jpg ... track-10.jpg\n  loop/\n    loop-01.mp4 ... loop-10.mp4\n    loop-idle.mp4\n```\nThe page looks for these exact paths on load. A lit A, I or V lamp on the cargo manifest means that file was found.\n\n## Drag and drop (no folder needed)\nDrop files onto the page, or press Load files. The page matches by name:\n- Audio: any audio file with the track number in the name (01-anything.mp3).\n- Images: cover, hero, khan, rusty by word; otherwise the first number in the name is the track.\n- Video: idle or master by word; otherwise the first number in the name is the track.\nDropped files only last until the page is reloaded. For a permanent build, use the folder tree.\n\n## Filling the blanks in the file\nNear the top of the script there is one object called ALBUM. Every track has four blanks:\n- audio, img and loop: change the path if your file lives somewhere else.\n- timings: an array of start times in seconds, one per lyric line, in order. Leave it empty to spread the lyrics over the track length automatically.\n\n## Syncing the lyrics to the real audio (do this once per track)\n1. Load the track and press Sync tap.\n2. Press play. Press MARK on the first sung word of each line as it is spoken.\n3. Press Copy timings. Paste the array into that track's timings field in ALBUM.\n\n## Hosting\nOpen index.html in a browser, or put the folder on any static host. If the page is uploaded to an environment that blocks remote media, use the folder tree and relative paths, not links to other sites.\n\n\n---\n\n# QA checklist\n\n- [ ] All 10 audio files play, in order, with no clipping.\n- [ ] Track 5: the beat drops out fully for the single shouted line and returns identically.\n- [ ] Track 7: the whispered passage is intelligible and there is no beat.\n- [ ] Track 10: the last twenty seconds are only wind and one dog bark.\n- [ ] The dog is audible somewhere in tracks 1, 2, 3, 5, 6, 7, 8, 9 and 10, and silent at the ghost in track 4.\n- [ ] No lyric was changed. Run a text diff against the brief.\n- [ ] No text, logos or watermarks in any image or loop.\n- [ ] Every loop is exactly 5 seconds and the seam is invisible.\n- [ ] Every track has an A, I and V lamp lit on the cargo manifest.\n- [ ] Lyrics are synced within half a second on every track (Sync tap).\n- [ ] The page works on a phone: ignition button, seek, next, brief panel.\n- [ ] Report: table of file, status, notes, and a list of anything not done.\n"};
+</script>
+
+<script>
+(() => {
+'use strict';
+const ALBUM = window.ALBUM, BRIEF = window.BRIEF, T = ALBUM.tracks;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const pad2 = n => String(n).padStart(2, '0');
+const rnd = (a, b) => a + Math.random() * (b - a);
+const fmt = s => { s = isFinite(s) ? Math.max(0, s) : 0; return Math.floor(s / 60) + ':' + pad2(Math.floor(s % 60)); };
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+let toastT = 0;
+function toast(msg) { const e = $('#toast'); e.textContent = msg; e.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => e.classList.remove('on'), 2400); }
+
+/* ------------------------------------------------------------------ state */
+const ST = { i: 0, playing: false, ignited: false, justIgnited: false, mode: 'demo', ev: -2, rpm: 0, intensity: 0, demoPos: 0, repeat: false, vol: 0.85, done: false };
+const FOUND = { cover: false, hero: false, khan: false, rusty: false, idle: false };
+const ASSET = { cover: null, hero: null, khan: null, rusty: null, idle: null };
+
+/* ------------------------------------------------------------------ lyrics */
+const INT = { rage: 1, finale: .85, hook: .7, verse: .45, spoken: .27, whisper: .16, dir: .1 };
+function kindOf(sec, l) {
+  if (/somebody didn't/i.test(l)) return 'finale';
+  if (l.length > 8 && l === l.toUpperCase() && /[A-Z]{3}/.test(l)) return 'rage';
+  const n = (sec.name + ' ' + sec.mods).toLowerCase();
+  if (/snap/.test(n)) return 'rage';
+  if (/hook/.test(n)) return 'hook';
+  if (/ghost|whisper/.test(n)) return 'whisper';
+  if (/spoken|flat/.test(n)) return 'spoken';
+  return 'verse';
+}
+function parseLyrics(txt) {
+  const out = []; let sec = { name: '', mods: '' };
+  txt.split('\n').forEach(raw => {
+    const l = raw.trim(); if (!l) return;
+    const m = l.match(/^\[(.+)\]$/);
+    if (m) {
+      const inner = m[1], k = inner.indexOf(':');
+      const name = (k < 0 ? inner : inner.slice(0, k)).trim(), mods = (k < 0 ? '' : inner.slice(k + 1)).trim();
+      sec = { name, mods };
+      if (/^(intro|outro)$/i.test(name) && mods && !/^(spoken|flat|ghost|khan|whisper|low)/i.test(mods)) out.push({ text: mods, kind: 'dir', sec, int: INT.dir });
+      return;
+    }
+    const kind = kindOf(sec, l);
+    out.push({ text: l, kind, sec, int: INT[kind] });
+  });
+  return out;
+}
+function loadSaved(n) { try { const v = JSON.parse(localStorage.getItem('khan.t' + n) || 'null'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+function saveTimes(n, a) { try { localStorage.setItem('khan.t' + n, JSON.stringify(a)); } catch (e) {} }
+
+T.forEach(t => {
+  t.take = 'A';
+  if (!t.audioAlt && t.audio) t.audioAlt = t.audio.replace(/^(assets\/audio\/)/, '$1alt/');
+  t.assets = { audio: null, audioAlt: null, img: null, loop: null };
+  t.found = { audio: false, audioAlt: false, img: false, loop: false };
+  t.events = parseLyrics(t.lyrics);
+  if (!Array.isArray(t.timings) || !t.timings.length) t.timings = loadSaved(t.n);
+});
+const audioKey = t => t.take === 'B' ? 'audioAlt' : 'audio';
+const audioSrc = t => t.assets[audioKey(t)];
+
+function buildTimings(t, total) {
+  const ev = t.events;
+  if (t.timings && t.timings.length === ev.length && t.timings.every(x => typeof x === 'number')) {
+    ev.forEach((e, i) => { e.t0 = t.timings[i]; });
+  } else {
+    const w = ev.map(e => e.kind === 'dir' ? 2.4 : 0.9 + e.text.length * 0.075 + (e.kind === 'hook' ? .5 : 0) + (e.kind === 'rage' ? 1.4 : 0) + (e.kind === 'finale' ? 2.5 : 0));
+    const sum = w.reduce((a, b) => a + b, 0), start = Math.min(4, total * .03), k = (total * .94 - start) / sum;
+    let at = start; ev.forEach((e, i) => { e.t0 = at; at += w[i] * k; });
+  }
+  ev.forEach((e, i) => { if (i && e.t0 < ev[i - 1].t0) e.t0 = ev[i - 1].t0; });
+}
+
+/* ------------------------------------------------------------------ audio */
+const AE = { ctx: null, master: null, analyser: null, data: null, demo: null, srcNode: null, noise: null, sput: null };
+const au = new Audio(); au.preload = 'auto';
+function ensureAudio() {
+  if (AE.ctx) return;
+  const C = window.AudioContext || window.webkitAudioContext; if (!C) return;
+  try {
+    AE.ctx = new C(); AE.master = AE.ctx.createGain(); AE.master.gain.value = ST.vol;
+    AE.analyser = AE.ctx.createAnalyser(); AE.analyser.fftSize = 256; AE.data = new Uint8Array(AE.analyser.frequencyBinCount);
+    AE.master.connect(AE.analyser); AE.analyser.connect(AE.ctx.destination);
+  } catch (e) { AE.ctx = null; }
+}
+function resumeCtx() { if (AE.ctx && AE.ctx.state === 'suspended') AE.ctx.resume().catch(() => {}); }
+function hookFile() { if (AE.srcNode || !AE.ctx) return; try { AE.srcNode = AE.ctx.createMediaElementSource(au); AE.srcNode.connect(AE.master); } catch (e) { au.volume = ST.vol; } }
+function level() {
+  if (!AE.analyser) return 0; AE.analyser.getByteFrequencyData(AE.data);
+  let s = 0; for (let i = 0; i < 24; i++) s += AE.data[i]; return s / (24 * 255);
+}
+function noiseBuf() {
+  if (AE.noise) return AE.noise; const c = AE.ctx, n = c.sampleRate * 2, b = c.createBuffer(1, n, c.sampleRate), d = b.getChannelData(0);
+  for (let i = 0; i < n; i++) d[i] = Math.random() * 2 - 1; AE.noise = b; return b;
+}
+function kick() {
+  const c = AE.ctx; if (!c) return; const t = c.currentTime, o = c.createOscillator(), g = c.createGain();
+  o.type = 'sine'; o.frequency.setValueAtTime(115, t); o.frequency.exponentialRampToValueAtTime(42, t + .14);
+  g.gain.setValueAtTime(.42, t); g.gain.exponentialRampToValueAtTime(.001, t + .2); o.connect(g); g.connect(AE.master); o.start(t); o.stop(t + .22);
+}
+function startDemo(bpm) {
+  ensureAudio(); const c = AE.ctx; if (!c) return; stopDemo();
+  const g = c.createGain(); g.gain.value = 0; g.connect(AE.master);
+  const o1 = c.createOscillator(); o1.type = 'sawtooth'; o1.frequency.value = 46;
+  const o2 = c.createOscillator(); o2.type = 'square'; o2.frequency.value = 23.2;
+  const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 240; lp.Q.value = 5;
+  const am = c.createGain(); am.gain.value = .55;
+  const lfo = c.createOscillator(); lfo.type = 'square'; lfo.frequency.value = Math.max(2, bpm / 60 * 2);
+  const lg = c.createGain(); lg.gain.value = .4; lfo.connect(lg); lg.connect(am.gain);
+  o1.connect(lp); o2.connect(lp); lp.connect(am); am.connect(g);
+  const ns = c.createBufferSource(); ns.buffer = noiseBuf(); ns.loop = true;
+  const bp = c.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 650; bp.Q.value = .5;
+  const wg = c.createGain(); wg.gain.value = .05; ns.connect(bp); bp.connect(wg); wg.connect(g);
+  [o1, o2, lfo, ns].forEach(n => n.start());
+  g.gain.linearRampToValueAtTime(.2, c.currentTime + .7);
+  const thump = setInterval(kick, 60000 / bpm);
+  AE.demo = { o1, o2, lfo, ns, g, thump };
+}
+function stopDemo() {
+  const d = AE.demo; if (!d) return; AE.demo = null; clearInterval(d.thump);
+  try { const t = AE.ctx.currentTime; d.g.gain.cancelScheduledValues(t); d.g.gain.setTargetAtTime(0, t, .08); } catch (e) {}
+  setTimeout(() => { [d.o1, d.o2, d.lfo, d.ns].forEach(n => { try { n.stop(); } catch (e) {} }); try { d.g.disconnect(); } catch (e) {} }, 400);
+}
+function burst(f, d, g) {
+  const c = AE.ctx; if (!c) return; const t = c.currentTime, o = c.createOscillator(), gn = c.createGain(), lp = c.createBiquadFilter();
+  o.type = 'sawtooth'; o.frequency.setValueAtTime(f, t); o.frequency.exponentialRampToValueAtTime(f * .6, t + d);
+  lp.type = 'lowpass'; lp.frequency.value = 380; gn.gain.setValueAtTime(g, t); gn.gain.exponentialRampToValueAtTime(.001, t + d);
+  o.connect(lp); lp.connect(gn); gn.connect(AE.master); o.start(t); o.stop(t + d + .02);
+}
+function sputterStart() { if (!AE.ctx) return; let n = 0; AE.sput = setInterval(() => { n++; burst(38 + rnd(0, 40) + n * 5, .09, .12 + n * .01); }, 130); }
+function sputterStop() { clearInterval(AE.sput); AE.sput = null; }
+function thunder() {
+  const c = AE.ctx; if (!c || !ST.playing) return; const t = c.currentTime;
+  const s = c.createBufferSource(); s.buffer = noiseBuf(); const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 140;
+  const g = c.createGain(); g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.5, t + .08); g.gain.exponentialRampToValueAtTime(.001, t + 1.6);
+  s.connect(lp); lp.connect(g); g.connect(AE.master); s.start(t); s.stop(t + 1.7);
+}
+function bark() {
+  const rusty = $('#rusty'); rusty.classList.add('bark'); $('#bub').textContent = ['WOOF', 'ARF', 'WOOF WOOF', 'YAP'][Math.floor(Math.random() * 4)]; $('#lDog').classList.add('on');
+  setTimeout(() => { rusty.classList.remove('bark'); $('#lDog').classList.remove('on'); }, 700);
+  ensureAudio(); const c = AE.ctx; if (!c) return; resumeCtx(); const t = c.currentTime;
+  for (let k = 0; k < 2; k++) {
+    const t0 = t + k * .17, o = c.createOscillator(), g = c.createGain(), f = c.createBiquadFilter();
+    o.type = 'sawtooth'; f.type = 'bandpass'; f.frequency.value = 900; f.Q.value = 3;
+    o.frequency.setValueAtTime(520, t0); o.frequency.exponentialRampToValueAtTime(260, t0 + .11);
+    g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.26, t0 + .015); g.gain.exponentialRampToValueAtTime(.001, t0 + .13);
+    o.connect(f); f.connect(g); g.connect(AE.master); o.start(t0); o.stop(t0 + .16);
+  }
+}
+
+/* ------------------------------------------------------------------ playback */
+const vid = $('#stVid');
+const total = () => { const t = T[ST.i]; return ST.mode === 'file' && isFinite(au.duration) && au.duration > 1 ? au.duration : t.dur; };
+const pos = () => ST.mode === 'file' ? au.currentTime : ST.demoPos;
+function seek(s) { s = clamp(s, 0, total()); if (ST.mode === 'file') { try { au.currentTime = s; } catch (e) {} } else ST.demoPos = s; ST.ev = -2; }
+function rebuild() { buildTimings(T[ST.i], total()); ST.ev = -2; }
+au.addEventListener('loadedmetadata', rebuild);
+au.addEventListener('ended', onEnded);
+au.addEventListener('error', () => {
+  if (ST.mode !== 'file') return; ST.mode = 'demo'; const t = T[ST.i], k = audioKey(t); t.found[k] = false; t.assets[k] = null;
+  if (ST.playing) startDemo(t.bpm); rebuild(); refreshLeds();
+});
+function loadTrack(i, auto) {
+  ST.i = clamp(i, 0, T.length - 1); const t = T[ST.i]; ST.done = false;
+  stopDemo(); au.pause(); ST.demoPos = 0;
+  const src = audioSrc(t);
+  if (src) { ST.mode = 'file'; au.src = src; au.load(); } else { ST.mode = 'demo'; au.removeAttribute('src'); }
+  applyMedia(); rebuild(); renderActive(); refreshTakes(); $('#trkTag').textContent = pad2(t.n) + ' ' + t.title.toUpperCase(); $('#tTot').textContent = fmt(total());
+  if (auto && ST.ignited) play(); else if (!ST.playing) idlePrompt();
+}
+function pickTrack(i) {
+  ensureAudio(); resumeCtx();
+  if (!ST.ignited) { ST.ignited = true; if (typeof setRing === 'function') setRing(1); }
+  loadTrack(i, true);
+}
+function setTake(i, which) {
+  const t = T[clamp(i, 0, T.length - 1)];
+  const next = which === 'B' ? 'B' : 'A';
+  const same = t.take === next;
+  t.take = next;
+  refreshTakes();
+  if (i === ST.i && !same) loadTrack(i, ST.playing || ST.ignited);
+}
+function play() {
+  ensureAudio(); resumeCtx(); const t = T[ST.i]; ST.playing = true; ST.done = false;
+  if (ST.mode === 'file') { hookFile(); const p = au.play(); if (p && p.catch) p.catch(() => { ST.mode = 'demo'; startDemo(t.bpm); }); } else startDemo(t.bpm);
+  if (!vid.hidden) vid.play().catch(() => {}); setPlayUi(); scheduleBark();
+}
+function pause() { ST.playing = false; if (ST.mode === 'file') au.pause(); stopDemo(); setPlayUi(); }
+function onEnded() {
+  if (ST.i < T.length - 1) { loadTrack(ST.i + 1, true); return; }
+  if (ST.repeat) { loadTrack(0, true); return; }
+  pause(); ST.done = true; ST.demoPos = 0; showMessage("THE ARCHIVE BURNED. THIS COPY SURVIVED.", 'finale');
+}
+function setPlayUi() {
+  $('#ignTxt').textContent = !ST.ignited ? 'Hold to warm' : (ST.playing ? 'Halt' : 'Ride');
+  $('#bIgn').classList.toggle('on', ST.ignited && ST.playing);
+}
+
+/* ------------------------------------------------------------------ lyric reel */
+const reel = $('#reel'), L = $$('.ln', reel); // p2 p1 cur n1 n2
+const stageEl = $('#stage');
+function setLn(node, text, cls) { node.className = 'ln ' + cls + (text ? '' : ' none'); node.textContent = text || ''; }
+function showMessage(text, kind) {
+  setLn(L[0], '', 'p2'); setLn(L[1], '', 'p1'); setLn(L[3], '', 'n1'); setLn(L[4], '', 'n2');
+  setLn(L[2], text, 'cur ' + kind + ' pop'); $('#secLabel').textContent = ST.done ? 'End of the record' : 'Engine cold';
+}
+function idlePrompt() {
+  const t = T[ST.i]; setLn(L[0], '', 'p2'); setLn(L[1], '', 'p1');
+  setLn(L[2], ST.ignited ? 'Press ride.' : 'Hold the button. Warm the engine.', 'cur hook');
+  setLn(L[3], t.title, 'n1'); setLn(L[4], '', 'n2'); $('#secLabel').textContent = 'Engine cold'; ST.intensity = 0;
+}
+function showLine(idx) {
+  const ev = T[ST.i].events; if (idx < 0) { if (ST.playing) { setLn(L[0], '', 'p2'); setLn(L[1], '', 'p1'); setLn(L[2], T[ST.i].title, 'cur hook'); setLn(L[3], '', 'n1'); setLn(L[4], '', 'n2'); ST.intensity = .3; } else idlePrompt(); return; }
+  const g = k => ev[k] ? ev[k].text : '';
+  const e = ev[idx];
+  setLn(L[0], g(idx - 2), 'p2'); setLn(L[1], g(idx - 1), 'p1');
+  const shocky = e.kind === 'rage' || e.kind === 'finale';
+  setLn(L[2], e.text, 'cur ' + e.kind + (REDUCED ? '' : (shocky ? ' shock' : ' pop')));
+  setLn(L[3], g(idx + 1), 'n1'); setLn(L[4], g(idx + 2), 'n2');
+  $('#secLabel').textContent = (e.sec.name ? e.sec.name : '') + (e.sec.mods ? ' / ' + e.sec.mods : '');
+  ST.intensity = e.int;
+  if (!REDUCED && ST.playing) {
+    spawnAsh(e.kind === 'rage' ? 16 : 7);
+    if (e.kind === 'rage') { stageEl.classList.remove('rage'); void stageEl.offsetWidth; stageEl.classList.add('rage'); const f = $('#flash'); f.classList.remove('on'); void f.offsetWidth; f.classList.add('on'); W.shake = 1; W.strike(); }
+    else if (e.kind === 'hook' && Math.random() < .35) W.strike();
+  }
+}
+function spawnAsh(n) {
+  const box = $('#ash'); if (box.children.length > 60) return;
+  for (let k = 0; k < n; k++) { const i = document.createElement('i'); i.style.left = rnd(4, 96) + '%'; i.style.top = rnd(52, 86) + '%'; i.style.setProperty('--dx', rnd(-40, 40) + 'px'); box.appendChild(i); setTimeout(() => i.remove(), 2500); }
+}
+function updateLyrics(p) {
+  const ev = T[ST.i].events; let idx = -1; for (let k = 0; k < ev.length; k++) { if (p >= ev[k].t0) idx = k; else break; }
+  if (idx !== ST.ev) { ST.ev = idx; showLine(idx); }
+}
+
+/* ------------------------------------------------------------------ media */
+function hexA(h, a) { const n = parseInt(h.slice(1), 16); return 'rgba(' + (n >> 16) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')'; }
+function drawPoster(t) {
+  const c = $('#poster'); c.width = 800; c.height = 1000; const x = c.getContext('2d'), pal = t.palette;
+  const g = x.createLinearGradient(0, 0, 0, 1000); g.addColorStop(0, hexA(pal[0], .5)); g.addColorStop(1, hexA(pal[1], .25)); x.fillStyle = g; x.fillRect(0, 0, 800, 1000);
+  x.font = '640px Anton, Impact, sans-serif'; x.textAlign = 'center'; x.lineWidth = 5; x.strokeStyle = hexA(pal[2], .3); x.strokeText(String(t.n), 400, 840);
+  x.strokeStyle = pal[2]; x.lineWidth = 6; x.lineCap = 'round'; x.globalAlpha = .85;
+  for (let k = 0; k < t.n; k++) { const gx = 60 + Math.floor(k / 5) * 70, kk = k % 5; if (kk < 4) { x.beginPath(); x.moveTo(gx + kk * 12, 120); x.lineTo(gx + kk * 12, 190); x.stroke(); } else { x.beginPath(); x.moveTo(gx - 6, 190); x.lineTo(gx + 54, 120); x.stroke(); } }
+}
+function applyMedia() {
+  const t = T[ST.i], img = $('#stImg'), poster = $('#poster'); drawPoster(t);
+  if (t.assets.img) { img.src = t.assets.img; img.hidden = false; poster.style.visibility = 'hidden'; } else { img.hidden = true; img.removeAttribute('src'); poster.style.visibility = 'visible'; }
+  const lp = t.assets.loop || ASSET.idle;
+  if (lp) { if (vid.getAttribute('src') !== lp) vid.src = lp; vid.hidden = false; vid.play().catch(() => {}); } else { vid.hidden = true; vid.removeAttribute('src'); }
+  const kh = $('#khanImg'); if (ASSET.khan) { kh.src = ASSET.khan; kh.hidden = false; } else kh.hidden = true;
+  const cv = $('#coverImg'); if (ASSET.cover) { cv.src = ASSET.cover; cv.hidden = false; } else cv.hidden = true;
+  if (ASSET.rusty) { const r = $('#rusty'); if (!r.dataset.img) { r.dataset.img = '1'; const im = new Image(); im.src = ASSET.rusty; im.alt = ''; im.style.cssText = 'display:block;width:100%'; r.querySelector('svg').replaceWith(im); } }
+}
+function testMedia(kind, src) {
+  return new Promise(res => {
+    let done = false; const fin = v => { if (!done) { done = true; res(v); } }; let e;
+    if (kind === 'img') { e = new Image(); e.onload = () => fin(true); e.onerror = () => fin(false); }
+    else { e = document.createElement(kind === 'audio' ? 'audio' : 'video'); e.preload = 'metadata'; e.muted = true; e.onloadedmetadata = () => fin(true); e.onerror = () => fin(false); }
+    setTimeout(() => fin(false), 7000); e.src = src;
+  });
+}
+function probe() {
+  T.forEach(t => {
+    [['audio', t.audio, 'audio'], ['audioAlt', t.audioAlt, 'audio'], ['img', t.img, 'img'], ['loop', t.loop, 'video']].forEach(([key, src, kind]) => {
+      if (!src) return;
+      testMedia(kind, src).then(ok => {
+        if (ok && !t.assets[key]) t.assets[key] = src;
+        t.found[key] = !!t.assets[key];
+        refreshLeds();
+        if (key === audioKey(t) && t === T[ST.i] && !ST.playing) loadTrack(ST.i, false);
+      });
+    });
+  });
+  [['cover', ALBUM.cover, 'img'], ['hero', ALBUM.hero, 'img'], ['khan', ALBUM.khan, 'img'], ['rusty', ALBUM.rusty, 'img'], ['idle', ALBUM.idleLoop, 'video']].forEach(([k, src, kind]) => {
+    if (!src) return; testMedia(kind, src).then(ok => { if (ok && !ASSET[k]) { ASSET[k] = src; FOUND[k] = true; applyMedia(); } });
+  });
+}
+
+/* ------------------------------------------------------------------ dashboard */
+function buildTach() {
+  const svg = $('#tach'), cx = 150, cy = 150, P = (a, r) => [cx + Math.cos(a) * r, cy + Math.sin(a) * r], ang = v => (135 + 27 * v) * Math.PI / 180;
+  let s = '<defs><radialGradient id="tg" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#1b1511"/><stop offset="1" stop-color="#070504"/></radialGradient></defs>';
+  s += '<circle cx="150" cy="150" r="146" fill="#2a221d" stroke="#0e0a08" stroke-width="4"/><circle cx="150" cy="150" r="136" fill="url(#tg)" stroke="#6a5a4c" stroke-width="2"/>';
+  const [x1, y1] = P(ang(8), 126), [x2, y2] = P(ang(10), 126);
+  s += `<path d="M${x1} ${y1} A126 126 0 0 1 ${x2} ${y2}" fill="none" stroke="#b02a14" stroke-width="9"/>`;
+  for (let i = 0; i <= 50; i++) { const v = i / 5, major = i % 5 === 0, [a, b] = P(ang(v), major ? 100 : 112), [c, d] = P(ang(v), 122); s += `<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="${v >= 8 ? '#ff6a3a' : '#eadfc4'}" stroke-width="${major ? 3 : 1.2}"/>`; }
+  for (let v = 0; v <= 10; v += 1) { const [a, b] = P(ang(v), 80); s += `<text x="${a}" y="${b + 6}" text-anchor="middle" fill="#eadfc4" style="font-family:var(--display);font-size:20px">${v}</text>`; }
+  s += '<text x="150" y="112" text-anchor="middle" fill="#ffc21a" style="font-family:var(--display);font-size:15px;letter-spacing:.2em">KHAN</text><text x="150" y="214" text-anchor="middle" fill="#a89877" style="font-family:var(--body);font-size:10px">RPM x1000</text>';
+  s += '<g id="needle" transform="translate(150 150) rotate(135)"><path d="M-14 -3.5 L124 -1.5 L124 1.5 L-14 3.5Z" fill="#ff7a1a"/></g><circle cx="150" cy="150" r="14" fill="#2a221d" stroke="#0e0a08" stroke-width="3"/><circle cx="150" cy="150" r="4" fill="#ffc21a"/>';
+  svg.innerHTML = s;
+}
+const needle = () => $('#needle');
+function renderManifest() {
+  const ol = $('#cargo'); ol.textContent = '';
+  T.forEach((t, i) => {
+    const li = el('li'), b = el('button', 'row'); b.type = 'button';
+    b.append(el('span', 'num', pad2(t.n)));
+    const mid = el('span'); mid.append(el('span', 'tt', t.title), el('br'), el('span', 'meta', fmt(t.dur) + ' target / ' + t.bpm + ' BPM')); b.append(mid);
+    const leds = el('span', 'leds'); [['A', 'audio'], ['I', 'img'], ['V', 'loop']].forEach(([ch, k]) => { const l = el('i', 'led', ch); l.dataset.k = k; l.title = k; leds.append(l); }); b.append(leds);
+    b.addEventListener('click', () => pickTrack(i));
+    const bar = el('div', 'takebar'); bar.append(el('span', 'takelbl', 'Take'));
+    [['A', 'Winner'], ['B', 'Runner-up']].forEach(([k, lab]) => {
+      const tb = el('button', 'take', k === 'A' ? 'A · Winner' : 'B · Runner-up');
+      tb.type = 'button'; tb.dataset.take = k;
+      tb.setAttribute('aria-label', lab + ', track ' + pad2(t.n));
+      tb.addEventListener('click', ev => { ev.preventDefault(); ev.stopPropagation(); setTake(i, k); });
+      bar.append(tb);
+    });
+    const f = el('p', 'facts'); const r = el('b', null, 'Real: '); const iv = el('b', null, 'Invented: ');
+    f.append(r, document.createTextNode(t.real), el('br'), iv, document.createTextNode(t.invented));
+    li.append(b, bar, f); ol.append(li);
+  });
+  refreshLeds(); renderActive(); refreshTakes();
+}
+function refreshLeds() { $$('#cargo li').forEach((li, i) => $$('.led', li).forEach(l => l.classList.toggle('on', l.dataset.k === 'audio' ? !!(T[i].found.audio || T[i].found.audioAlt) : !!T[i].found[l.dataset.k]))); }
+function renderActive() { $$('#cargo li').forEach((li, i) => li.classList.toggle('act', i === ST.i)); const s = $('#labSel'); if (s && s.value !== String(ST.i)) { s.value = String(ST.i); } }
+function refreshTakes() {
+  $$('#cargo li').forEach((li, i) => $$('.take', li).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.take === T[i].take))));
+  const cur = T[ST.i] && T[ST.i].take;
+  if ($('#bTakeA')) { $('#bTakeA').setAttribute('aria-pressed', String(cur === 'A')); $('#bTakeB').setAttribute('aria-pressed', String(cur === 'B')); }
+}
+
+/* ------------------------------------------------------------------ world canvas */
+const W = {
+  c: $('#world'), ctx: null, w: 0, h: 0, t: 0, scroll: 0, flash: 0, bolt: null, boltT: 0, nextBolt: 3, glints: [], shake: 0, riders: [], puffs: [], embers: [], streaks: [], base: 1,
+  init() { this.ctx = this.c.getContext('2d'); this.resize(); addEventListener('resize', () => this.resize()); },
+  resize() { const d = Math.min(devicePixelRatio || 1, 1.5); this.w = innerWidth; this.h = innerHeight; this.c.width = this.w * d; this.c.height = this.h * d; this.ctx.setTransform(d, 0, 0, d, 0, 0); this.build(); },
+  build() {
+    const { w, h } = this; this.base = Math.min(w, h) / 520; this.riders = [];
+    [[.665, .5, 5], [.79, .82, 4], [.93, 1.15, 3]].forEach(([yy, sc, n], ri) => { for (let i = 0; i < n; i++) this.riders.push({ row: ri, x: (i + .5) / n * (w + 120) - 60 + rnd(-30, 30), y: h * yy + rnd(-6, 6), s: this.base * sc * rnd(.9, 1.08), ph: rnd(0, 6.28), sp: rnd(.9, 1.12), w: rnd(0, 6.28) }); });
+    this.embers = Array.from({ length: 40 }, () => ({ x: rnd(0, w), y: rnd(0, h), vy: rnd(10, 45), vx: rnd(-25, -5), a: rnd(.2, .8), s: rnd(1, 2.4), f: rnd(0, 6) }));
+    this.streaks = Array.from({ length: 16 }, () => ({ x: rnd(0, w), y: rnd(h * .62, h), l: rnd(80, 320), a: rnd(.04, .12), v: rnd(.8, 1.6) }));
+  },
+  strike() {
+    if (REDUCED) return; const w = this.w, hy = this.h * .58; let x = rnd(w * .1, w * .9), y = 0; const pts = [[x, y]], ty = hy + rnd(10, this.h * .2);
+    while (y < ty) { y += rnd(18, 44); x += rnd(-26, 26); pts.push([x, Math.min(y, ty)]); }
+    this.bolt = pts; this.boltT = .35; this.flash = 1; this.shake = Math.max(this.shake, .25);
+    const e = pts[pts.length - 1]; this.glints.push({ x: e[0], y: e[1], life: 3.5 }); if (this.glints.length > 5) this.glints.shift(); thunder();
+  },
+  horse(ctx, x, y, s, ph, col) {
+    ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.fillStyle = col; ctx.strokeStyle = col; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.translate(0, Math.sin(ph * 2) * 2.2);
+    ctx.lineWidth = 6.5;
+    [[-26, -32, 0], [-19, -32, .9], [26, -30, Math.PI], [33, -30, Math.PI + .9]].forEach(([hx, hy, off]) => {
+      const a = Math.sin(ph + off) * .9, kn = Math.max(0, Math.sin(ph + off + 1.3)) * 1.1;
+      ctx.save(); ctx.translate(hx, hy); ctx.rotate(a); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 17); ctx.stroke();
+      ctx.translate(0, 17); ctx.rotate(-a * .4 - kn * .9 + (hx < 0 ? .5 : -.1)); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 17); ctx.stroke(); ctx.fillRect(-4, 16, 8, 4); ctx.restore();
+    });
+    ctx.beginPath(); ctx.moveTo(-34, -40); ctx.quadraticCurveTo(-8, -52, 24, -46); ctx.lineTo(40, -60); ctx.lineTo(54, -76); ctx.lineTo(66, -70); ctx.lineTo(74, -58); ctx.lineTo(70, -52); ctx.lineTo(56, -56); ctx.lineTo(40, -36);
+    ctx.quadraticCurveTo(30, -22, 10, -24); ctx.quadraticCurveTo(-18, -22, -34, -30); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(54, -76); ctx.lineTo(52, -87); ctx.lineTo(59, -77); ctx.fill();
+    ctx.fillRect(-9, -64, 6, 14);
+    ctx.lineWidth = 3; for (let i = 0; i < 4; i++) { ctx.beginPath(); ctx.moveTo(-33, -40 + i * 1.5); ctx.quadraticCurveTo(-52, -42 + Math.sin(ph * 1.5 + i) * 5, -70 - i * 3, -34 + i * 5 + Math.sin(ph * 1.7 + i) * 4); ctx.stroke(); }
+    ctx.beginPath(); ctx.moveTo(-4, -48); ctx.lineTo(8, -74); ctx.lineTo(16, -72); ctx.lineTo(8, -47); ctx.fill();
+    ctx.beginPath(); ctx.arc(13, -79, 5, 0, 6.283); ctx.fill(); ctx.beginPath(); ctx.moveTo(8, -82); ctx.lineTo(13, -97); ctx.lineTo(19, -82); ctx.fill();
+    ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(12, -70); ctx.lineTo(40, -58); ctx.stroke();
+    ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(-3, -50); ctx.lineTo(-12, -112); ctx.stroke();
+    ctx.lineWidth = 1.6; for (let i = 0; i < 9; i++) { const bx = -12 + (i - 4) * 1.4; ctx.beginPath(); ctx.moveTo(bx, -112); ctx.quadraticCurveTo(bx - 14, -108 + Math.sin(ph * 1.3 + i * .7) * 4, bx - 34 - Math.sin(ph + i) * 3, -100 + i * 1.6); ctx.stroke(); }
+    ctx.fillStyle = 'rgba(255,122,26,.3)'; ctx.beginPath(); ctx.arc(22, -34, 9, 0, 6.283); ctx.fill(); ctx.fillStyle = 'rgba(255,170,60,.95)'; ctx.beginPath(); ctx.arc(22, -34, 3.6, 0, 6.283); ctx.fill();
+    ctx.restore();
+  },
+  step(dt, rpm, playing) {
+    const ctx = this.ctx, w = this.w, h = this.h, hy = h * .58;
+    const sp = REDUCED ? .04 : (playing ? .22 + rpm * 1.5 : .1 + rpm * 1.2);
+    this.t += dt; this.scroll += dt * (30 + sp * 300);
+    if (!REDUCED) { this.nextBolt -= dt; if (this.nextBolt <= 0) { this.strike(); this.nextBolt = rnd(6, 13) * (playing ? 1 : 1.6); } }
+    this.flash = Math.max(0, this.flash - dt * 2.6); this.boltT = Math.max(0, this.boltT - dt); this.shake = Math.max(0, this.shake - dt * 2.2);
+    ctx.save(); if (this.shake > 0) ctx.translate(rnd(-1, 1) * this.shake * 8, rnd(-1, 1) * this.shake * 8);
+    let g = ctx.createLinearGradient(0, 0, 0, hy); g.addColorStop(0, '#05030a'); g.addColorStop(.55, '#2b0e07'); g.addColorStop(1, '#c4501b'); ctx.fillStyle = g; ctx.fillRect(-20, -20, w + 40, hy + 20);
+    const sr = Math.min(w, h) * .19, sx = w * .7, sy = hy - sr * .35;
+    g = ctx.createRadialGradient(sx, sy, sr * .9, sx, sy, sr * 3); g.addColorStop(0, 'rgba(255,140,40,.65)'); g.addColorStop(1, 'rgba(255,100,20,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, hy + 10);
+    ctx.save(); ctx.translate(sx, sy); ctx.rotate(this.t * .05); ctx.strokeStyle = 'rgba(255,170,70,.28)'; ctx.lineWidth = 1.2;
+    for (let i = 0; i < 28; i++) { const a = i / 28 * 6.283, r2 = sr * (1.3 + (i % 3) * .18); ctx.beginPath(); ctx.moveTo(Math.cos(a) * sr * 1.05, Math.sin(a) * sr * 1.05); ctx.lineTo(Math.cos(a) * r2, Math.sin(a) * r2); ctx.stroke(); } ctx.restore();
+    ctx.fillStyle = '#030201'; ctx.beginPath(); ctx.arc(sx, sy, sr, 0, 6.283); ctx.fill(); ctx.strokeStyle = 'rgba(255,150,50,.5)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(sx, sy, sr + 1, 0, 6.283); ctx.stroke();
+    ctx.fillStyle = 'rgba(10,6,4,.5)';
+    for (let i = 0; i < 5; i++) { const cx = ((i * .27 * w + this.t * 7 * (1 + i * .2)) % (w + 400)) - 200; ctx.beginPath(); ctx.ellipse(cx, h * (.08 + .07 * i), 160 + i * 30, 14 + i * 3, 0, 0, 6.283); ctx.fill(); }
+    const ridge = (by, amp, fr, spd, col, seed) => { ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(0, hy + 4); for (let x = 0; x <= w + 8; x += 8) { const u = (x + this.scroll * spd) * fr; ctx.lineTo(x, by - (Math.sin(u + seed) * amp + Math.sin(u * 2.31 + seed * 2) * amp * .45 + Math.sin(u * 5.1 + seed) * amp * .12)); } ctx.lineTo(w, hy + 4); ctx.closePath(); ctx.fill(); };
+    ridge(hy - 6, 22, .006, .05, '#1a0d08', 1.3); ridge(hy, 16, .01, .12, '#0f0805', 4.1);
+    g = ctx.createLinearGradient(0, hy, 0, h); g.addColorStop(0, '#5a2411'); g.addColorStop(.22, '#26120a'); g.addColorStop(.6, '#0f0805'); g.addColorStop(1, '#050302'); ctx.fillStyle = g; ctx.fillRect(0, hy, w, h - hy);
+    g = ctx.createLinearGradient(0, hy - 40, 0, hy + h * .16); g.addColorStop(0, 'rgba(255,120,30,0)'); g.addColorStop(.35, 'rgba(255,130,40,.34)'); g.addColorStop(1, 'rgba(255,120,30,0)'); ctx.fillStyle = g; ctx.fillRect(0, hy - 40, w, h * .16 + 40);
+    for (let k = 0; k < 26; k++) {
+      const u = Math.pow((k + 1) / 26, 2), y = hy + u * (h - hy), len = 14 + u * 180, gap = w / 2.2, off = (this.scroll * (.25 + u * 2.2) + k * 97) % gap;
+      ctx.strokeStyle = 'rgba(182,71,26,' + (.08 + u * .2) + ')'; ctx.lineWidth = .6 + u * 2.2;
+      for (let x = -off; x < w + len; x += gap) { ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + len, y); ctx.stroke(); }
+    }
+    const cols = ['#0d0604', '#0a0503', '#060302'];
+    this.riders.forEach(r => {
+      r.ph += dt * (5 + rpm * 9) * r.sp * (REDUCED ? .2 : 1); r.w += dt * .4;
+      const rx = r.x + Math.sin(r.w) * 18, ry = r.y + Math.sin(r.w * 1.7) * 3;
+      this.horse(ctx, rx + 1.8 * r.s, ry - 1.6 * r.s, r.s, r.ph, 'rgba(255,135,45,' + (.2 + r.row * .1) + ')');
+      this.horse(ctx, rx, ry, r.s, r.ph, cols[r.row]);
+      if (!REDUCED && Math.random() < dt * (playing ? 3 : 1)) this.puffs.push({ x: rx - 6 * r.s, y: ry - 62 * r.s, r: 3 * r.s, a: .5, vx: -30 - rpm * 80, vy: -22 });
+    });
+    this.puffs = this.puffs.filter(p => { p.x += p.vx * dt; p.y += p.vy * dt; p.r += dt * 9 * this.base; p.a -= dt * .5; if (p.a <= 0) return false; ctx.fillStyle = 'rgba(30,20,14,' + p.a * .8 + ')'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); return true; });
+    this.embers.forEach(e => { e.y -= e.vy * dt; e.x += (e.vx - sp * 60) * dt; if (e.y < -5) { e.y = h + 5; e.x = rnd(0, w); } if (e.x < -5) e.x = w + 5; ctx.fillStyle = 'rgba(255,140,40,' + (e.a * (.6 + .4 * Math.sin(this.t * 5 + e.f))) + ')'; ctx.fillRect(e.x, e.y, e.s, e.s); });
+    ctx.lineWidth = 1.4; this.streaks.forEach(s => { s.x -= s.v * (300 + sp * 900) * dt; if (s.x < -s.l) { s.x = w + rnd(0, 200); s.y = rnd(h * .62, h); } ctx.strokeStyle = 'rgba(234,223,196,' + s.a + ')'; ctx.beginPath(); ctx.moveTo(s.x, s.y); ctx.lineTo(s.x + s.l, s.y); ctx.stroke(); });
+    if (this.boltT > 0 && this.bolt) { ctx.strokeStyle = 'rgba(210,255,255,' + clamp(this.boltT / .35, 0, 1) + ')'; ctx.lineWidth = 2.6; ctx.shadowColor = '#7ff6ff'; ctx.shadowBlur = 18; ctx.beginPath(); this.bolt.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.stroke(); ctx.shadowBlur = 0; }
+    this.glints = this.glints.filter(q => { q.life -= dt; if (q.life <= 0) return false; const a = clamp(q.life / 3.5, 0, 1) * (.6 + .4 * Math.sin(this.t * 9 + q.x)); ctx.strokeStyle = 'rgba(127,246,255,' + a + ')'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(q.x - 7, q.y); ctx.lineTo(q.x + 7, q.y); ctx.moveTo(q.x, q.y - 7); ctx.lineTo(q.x, q.y + 7); ctx.stroke(); return true; });
+    if (this.flash > 0) { ctx.fillStyle = 'rgba(127,246,255,' + this.flash * .2 + ')'; ctx.fillRect(-20, -20, w + 40, h + 40); }
+    g = ctx.createLinearGradient(0, h, 0, h * .6); g.addColorStop(0, 'rgba(255,100,20,' + rpm * .18 + ')'); g.addColorStop(1, 'rgba(255,100,20,0)'); ctx.fillStyle = g; ctx.fillRect(0, h * .6, w, h * .4);
+    ctx.restore();
+  }
+};
+
+/* ------------------------------------------------------------------ main loop */
+let lastT = performance.now(), lastShown = {};
+function frame(now) {
+  const dt = Math.min(.05, (now - lastT) / 1000); lastT = now;
+  if (ST.playing && ST.mode === 'demo') { ST.demoPos += dt; if (ST.demoPos >= total()) { onEnded(); } }
+  const p = pos(), tot = total();
+  if (ST.playing) updateLyrics(p);
+  const lv = level();
+  let target = ST.playing ? (ST.mode === 'file' && lv > .01 ? clamp(.12 + lv * 1.3 + ST.intensity * .3, .08, 1.05) : clamp(.14 + ST.intensity * .85, .08, 1.05)) : 0;
+  ST.rpm += (target - ST.rpm) * Math.min(1, dt * 4);
+  const shake = ST.playing ? Math.sin(now / 37) * .012 * ST.rpm : 0;
+  const n = needle(); if (n) n.setAttribute('transform', 'translate(150 150) rotate(' + (135 + 270 * clamp(ST.rpm + shake, 0, 1.04)) + ')');
+  const frac = tot ? clamp(p / tot, 0, 1) : 0, fp = Math.round(frac * 1000) / 10;
+  if (lastShown.fp !== fp) { lastShown.fp = fp; $('#fuelFill').style.width = 'calc(' + fp + '% - 8px)'; $('#fuel').setAttribute('aria-valuenow', Math.round(fp)); $('#fuelTxt').textContent = fp < 3 ? 'F' : (fp > 97 ? 'E' : Math.round(100 - fp) + '%'); }
+  const tn = fmt(p); if (lastShown.tn !== tn) { lastShown.tn = tn; $('#tNow').textContent = tn; $('#tTot').textContent = fmt(tot); }
+  const hp = Math.round(ST.rpm * 100); if (lastShown.hp !== hp) { lastShown.hp = hp; $('#heat').style.width = clamp(hp, 0, 100) + '%'; $('#heatTxt').textContent = hp; }
+  const on = (id, v) => { const e = $(id); if (lastShown[id] !== v) { lastShown[id] = v; e.classList.toggle('on', v); } };
+  on('#lAirag', ST.playing && ST.intensity > .6); on('#lDust', ST.playing); on('#lOil', ST.playing && Math.floor(now / 900) % 5 !== 0);
+  if (AE.demo && AE.ctx) { try { AE.demo.o1.frequency.setTargetAtTime(44 + ST.rpm * 70, AE.ctx.currentTime, .08); } catch (e) {} }
+  W.step(dt, ST.rpm, ST.playing);
+  labFrame(now);
+  requestAnimationFrame(frame);
+}
+
+/* ------------------------------------------------------------------ ignition */
+const ign = $('#bIgn'), ring = $('#ring'), RING = 2 * Math.PI * 68; ring.style.strokeDasharray = RING; ring.style.strokeDashoffset = RING;
+let hold = null;
+const setRing = p => { ring.style.strokeDashoffset = RING * (1 - p); };
+function holdStart(e) {
+  if (ST.ignited || hold) return; if (e && e.preventDefault) e.preventDefault();
+  ensureAudio(); resumeCtx(); hold = { t0: performance.now(), raf: 0 }; ign.classList.add('holding'); $('#ignTxt').textContent = 'Warming'; sputterStart();
+  const tick = now => { if (!hold) return; const p = clamp((now - hold.t0) / 950, 0, 1); setRing(p); if (p >= 1) holdDone(); else hold.raf = requestAnimationFrame(tick); };
+  hold.raf = requestAnimationFrame(tick);
+}
+function holdCancel() { if (!hold) return; cancelAnimationFrame(hold.raf); hold = null; ign.classList.remove('holding'); setRing(0); $('#ignTxt').textContent = 'Hold to warm'; sputterStop(); }
+function holdDone() { cancelAnimationFrame(hold.raf); hold = null; ign.classList.remove('holding'); ST.ignited = true; ST.justIgnited = true; setTimeout(() => { ST.justIgnited = false; }, 350); sputterStop(); W.shake = 1; setRing(1); ST.ev = -2; play(); }
+ign.addEventListener('pointerdown', holdStart);
+['pointerup', 'pointercancel', 'pointerleave'].forEach(ev => ign.addEventListener(ev, holdCancel));
+ign.addEventListener('keydown', e => { if ((e.key === ' ' || e.key === 'Enter') && !ST.ignited) { e.preventDefault(); if (!e.repeat) holdStart(); } });
+ign.addEventListener('keyup', e => { if ((e.key === ' ' || e.key === 'Enter') && hold) holdCancel(); });
+ign.addEventListener('click', () => { if (!ST.ignited || ST.justIgnited) return; if (ST.playing) pause(); else play(); });
+ign.addEventListener('contextmenu', e => e.preventDefault());
+
+$('#bPrev').addEventListener('click', () => { ensureAudio(); if (pos() > 3) { seek(0); } else loadTrack(ST.i - 1, ST.ignited && ST.playing); });
+$('#bNext').addEventListener('click', () => { ensureAudio(); loadTrack(ST.i + 1, ST.ignited && ST.playing); });
+$('#vol').addEventListener('input', e => { ST.vol = +e.target.value; if (AE.master) AE.master.gain.value = ST.vol; au.volume = AE.srcNode ? 1 : ST.vol; });
+$('#bRep').addEventListener('click', e => { ST.repeat = !ST.repeat; e.currentTarget.setAttribute('aria-pressed', String(ST.repeat)); });
+$('#bTakeA').addEventListener('click', () => setTake(ST.i, 'A'));
+$('#bTakeB').addEventListener('click', () => setTake(ST.i, 'B'));
+const fuelEl = $('#fuel'); let seeking = false;
+const seekFrom = e => { const r = fuelEl.getBoundingClientRect(); seek(clamp((e.clientX - r.left) / r.width, 0, 1) * total()); };
+fuelEl.addEventListener('pointerdown', e => { seeking = true; try { fuelEl.setPointerCapture(e.pointerId); } catch (x) {} seekFrom(e); });
+fuelEl.addEventListener('pointermove', e => { if (seeking) seekFrom(e); });
+['pointerup', 'pointercancel'].forEach(ev => fuelEl.addEventListener(ev, () => { seeking = false; }));
+fuelEl.addEventListener('keydown', e => { if (e.key === 'ArrowRight') seek(pos() + 5); if (e.key === 'ArrowLeft') seek(pos() - 5); });
+
+/* ------------------------------------------------------------------ rusty */
+let barkT = 0;
+function scheduleBark() { clearTimeout(barkT); barkT = setTimeout(() => { if (ST.playing && !$('#rusty').hidden) bark(); scheduleBark(); }, rnd(16000, 38000)); }
+$('#rusty').addEventListener('click', bark);
+$('#bRusty').addEventListener('click', () => { toast('Rusty refuses.'); bark(); });
+
+/* ------------------------------------------------------------------ files */
+function mapFiles(files) {
+  const c = { audio: 0, img: 0, loop: 0 }, num = n => { const m = n.match(/(\d{1,2})/); const v = m ? +m[1] : 0; return v >= 1 && v <= T.length ? v : 0; };
+  Array.from(files).forEach(f => {
+    const n = f.name.toLowerCase(), url = URL.createObjectURL(f);
+    if (f.type.startsWith('audio') || /\.(mp3|wav|m4a|ogg|flac|aac)$/.test(n)) { const k = num(n); if (k) { const rel = (f.webkitRelativePath || '').toLowerCase(); const alt = /(?:^|\/|\\)alt(?:\/|\\)/.test(rel) || /(?:^|[-_\s.])alt(?:[-_\s.]|$)/.test(n); const key = alt ? 'audioAlt' : 'audio'; T[k - 1].assets[key] = url; T[k - 1].found[key] = true; c.audio++; } }
+    else if (f.type.startsWith('video') || /\.(mp4|webm|mov|m4v)$/.test(n)) { if (/idle|master/.test(n)) { ASSET.idle = url; FOUND.idle = true; c.loop++; } else { const k = num(n); if (k) { T[k - 1].assets.loop = url; T[k - 1].found.loop = true; c.loop++; } } }
+    else if (f.type.startsWith('image') || /\.(jpe?g|png|webp|gif|avif)$/.test(n)) {
+      if (/cover/.test(n)) ASSET.cover = url; else if (/hero|banner/.test(n)) ASSET.hero = url; else if (/khan/.test(n)) ASSET.khan = url; else if (/rusty/.test(n)) ASSET.rusty = url;
+      else { const k = num(n); if (k) { T[k - 1].assets.img = url; T[k - 1].found.img = true; } else return; } c.img++;
+    }
+  });
+  const sum = c.audio + c.img + c.loop;
+  if (!sum) { toast('No files matched. Put the track number in the name.'); return; }
+  toast(sum + ' files loaded: ' + c.audio + ' audio, ' + c.img + ' images, ' + c.loop + ' loops'); refreshLeds();
+  const wasPlaying = ST.playing; if (wasPlaying) pause(); loadTrack(ST.i, false); if (wasPlaying && ST.ignited) play();
+}
+$('#bLoad').addEventListener('click', () => $('#files').click());
+$('#files').addEventListener('change', e => { mapFiles(e.target.files); e.target.value = ''; });
+let dragN = 0; const dropEl = $('#drop');
+addEventListener('dragenter', e => { if (e.dataTransfer && Array.from(e.dataTransfer.types || []).includes('Files')) { dragN++; dropEl.classList.add('on'); } });
+addEventListener('dragleave', () => { dragN = Math.max(0, dragN - 1); if (!dragN) dropEl.classList.remove('on'); });
+addEventListener('dragover', e => e.preventDefault());
+addEventListener('drop', e => { e.preventDefault(); dragN = 0; dropEl.classList.remove('on'); if (e.dataTransfer && e.dataTransfer.files.length) mapFiles(e.dataTransfer.files); });
+
+/* ------------------------------------------------------------------ sync tap */
+const SY = { on: false, cur: 0, times: [] };
+function syFill() { const ev = T[ST.i].events; while (SY.cur < ev.length && ev[SY.cur].kind === 'dir') { SY.times[SY.cur] = SY.cur ? SY.times[SY.cur - 1] + .5 : 0; SY.cur++; } }
+function syUi() { const ev = T[ST.i].events; syFill(); $('#syncLine').textContent = SY.cur < ev.length ? ev[SY.cur].text : 'All lines marked. Copy the timings.'; }
+$('#bSync').addEventListener('click', e => {
+  SY.on = !SY.on; e.currentTarget.setAttribute('aria-pressed', String(SY.on)); $('#syncBox').hidden = !SY.on;
+  if (SY.on) { SY.cur = 0; SY.times = []; seek(0); syUi(); toast('Sync on. Play, then mark each line.'); }
+});
+function syMark() { if (!SY.on) return; const ev = T[ST.i].events; syFill(); if (SY.cur >= ev.length) return; SY.times[SY.cur] = +pos().toFixed(2); SY.cur++; syUi(); }
+$('#syMark').addEventListener('click', syMark);
+addEventListener('keydown', e => { if (e.key.toLowerCase() === 'm' && SY.on && !/INPUT|TEXTAREA|SELECT/.test((e.target.tagName || ''))) { e.preventDefault(); syMark(); } });
+$('#syUndo').addEventListener('click', () => { if (SY.cur > 0) { SY.cur--; while (SY.cur > 0 && T[ST.i].events[SY.cur].kind === 'dir') SY.cur--; SY.times.length = SY.cur; syUi(); } });
+$('#syReset').addEventListener('click', () => { SY.cur = 0; SY.times = []; syUi(); });
+$('#syCopy').addEventListener('click', e => {
+  const t = T[ST.i], ev = t.events, a = []; for (let i = 0; i < ev.length; i++) a[i] = typeof SY.times[i] === 'number' ? SY.times[i] : (i ? a[i - 1] + .5 : 0);
+  for (let i = 1; i < a.length; i++) if (a[i] < a[i - 1]) a[i] = a[i - 1];
+  t.timings = a; saveTimes(t.n, a); rebuild(); copyText(JSON.stringify(a), e.currentTarget, 'Timings copied');
+});
+
+/* ------------------------------------------------------------------ copy */
+function copyText(text, btn, msg) {
+  const done = () => toast(msg || 'Copied');
+  const fallback = () => {
+    try { const ta = document.createElement('textarea'); ta.value = text; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); if (ok) { done(); return; } } catch (e) {}
+    $('#copyTa').value = text; $('#copybox').classList.add('on'); $('#copyTa').focus(); $('#copyTa').select();
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback();
+}
+$('#copyClose').addEventListener('click', () => $('#copybox').classList.remove('on'));
+
+/* ------------------------------------------------------------------ dispatch */
+const disp = $('#disp');
+function copyBtn(label, getText, msg) { const b = el('button', 'btn mini', label); b.type = 'button'; b.addEventListener('click', () => copyText(typeof getText === 'function' ? getText() : getText, b, msg)); return b; }
+function field(card, k, v) { card.append(el('p', 'kv', k)); card.append(el('pre', 'md', v)); }
+function head(md, marker) { const i = md.indexOf(marker); return i < 0 ? md : md.slice(0, i).trim(); }
+function renderTab(id) {
+  const body = $('#dBody'); body.textContent = ''; const sec = BRIEF.sections.find(s => s.id === id);
+  $$('#dTabs .tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.id === id)));
+  const block = (title, text) => { const c = el('div', 'card'); c.append(el('h3', null, title), el('pre', 'md', text)); const r = el('div', 'cbtns'); r.append(copyBtn('Copy', text)); c.append(r); body.append(c); };
+  if (id === 'suno') {
+    block('Settings and fallbacks', head(sec.md, '\n## 01 '));
+    T.forEach(t => {
+      const c = el('div', 'card'); c.append(el('h3', null, pad2(t.n) + ' ' + t.title)); c.append(el('p', 'kv', 'File ' + pad2(t.n) + '-' + t.slug + '.mp3 / target ' + fmt(t.dur) + ' / ' + t.bpm + ' BPM'));
+      field(c, 'Style of music', t.style); field(c, 'Exclude styles', t.exclude); field(c, 'Pick the take where', t.pick); field(c, 'Lyrics', t.lyrics);
+      const r = el('div', 'cbtns'); r.append(copyBtn('Copy title', t.title), copyBtn('Copy style', t.style), copyBtn('Copy exclude', t.exclude), copyBtn('Copy lyrics', t.lyrics)); c.append(r); body.append(c);
+    });
+  } else if (id === 'images') {
+    block('Style bible and rules', head(sec.md, '\n## track-01'));
+    T.forEach(t => { const c = el('div', 'card'); c.append(el('h3', null, 'track-' + pad2(t.n) + '.jpg  ' + t.title)); c.append(el('p', 'kv', 'Ratio 4:5, 1080x1350 or larger')); c.append(el('pre', 'md', t.imgPrompt)); const r = el('div', 'cbtns'); r.append(copyBtn('Copy prompt with style bible', ALBUM.styleBible + ' ' + t.imgPrompt), copyBtn('Copy prompt only', t.imgPrompt)); c.append(r); body.append(c); });
+    const extras = []; const re = /## (cover\.jpg|hero\.jpg|khan\.png|rusty\.png)\nRatio ([^,]+), ([^.\n]+)\.\n([^\n]+)/g; let m;
+    while ((m = re.exec(sec.md))) extras.push({ file: m[1], ratio: m[2], size: m[3], prompt: m[4] });
+    extras.forEach(x => { const c = el('div', 'card'); c.append(el('h3', null, x.file)); c.append(el('p', 'kv', 'Ratio ' + x.ratio + ', ' + x.size)); c.append(el('pre', 'md', x.prompt)); const r = el('div', 'cbtns'); r.append(copyBtn('Copy prompt with style bible', ALBUM.styleBible + ' ' + x.prompt), copyBtn('Copy prompt only', x.prompt)); c.append(r); body.append(c); });
+  } else if (id === 'loops') {
+    block('Rules', head(sec.md, '\n## loop-01'));
+    T.forEach(t => { const c = el('div', 'card'); c.append(el('h3', null, 'loop-' + pad2(t.n) + '.mp4  from track-' + pad2(t.n) + '.jpg')); c.append(el('pre', 'md', t.loopPrompt)); const r = el('div', 'cbtns'); r.append(copyBtn('Copy motion prompt', t.loopPrompt)); c.append(r); body.append(c); });
+    const gi = sec.md.indexOf('# KINETIC'); if (gi > -1) block('Kinetic lyric GIFs', sec.md.slice(gi));
+  } else block(sec.title, sec.md);
+}
+function buildDispatch() {
+  $('#dPrompt').textContent = BRIEF.prompt;
+  $('#dPromptCopy').addEventListener('click', e => copyText(BRIEF.prompt, e.currentTarget, 'Prompt copied'));
+  $('#dAll').addEventListener('click', e => copyText(BRIEF.full, e.currentTarget, 'Whole brief copied'));
+  $('#dSrc').addEventListener('click', async e => {
+    let src = ''; try { const r = await fetch(location.href); if (r.ok) src = await r.text(); } catch (x) {}
+    if (!src) { src = '<!DOCTYPE html>\n' + document.documentElement.outerHTML; toast('Copied the rendered page. The saved file is cleaner.'); }
+    copyText(src, e.currentTarget, 'Page source copied');
+  });
+  const tabs = $('#dTabs'); BRIEF.sections.forEach(s => { const b = el('button', 'tab', s.title); b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.id = s.id; b.addEventListener('click', () => renderTab(s.id)); tabs.append(b); });
+  renderTab('mission');
+}
+$('#bDisp').addEventListener('click', () => { disp.classList.add('on'); disp.scrollTop = 0; });
+$('#dClose').addEventListener('click', () => disp.classList.remove('on'));
+addEventListener('keydown', e => { if (e.key === 'Escape') { disp.classList.remove('on'); $('#copybox').classList.remove('on'); } });
+
+/* ------------------------------------------------------------------ loop lab */
+const lab = { c: $('#lab'), x: null, idx: 0, t0: performance.now() };
+function labFrame(now) {
+  if (!lab.x) lab.x = lab.c.getContext('2d'); const x = lab.x, S = lab.c.width, TAU = Math.PI * 2, u = ((now - lab.t0) % 4000) / 4000, t = T[lab.idx], hook = t.hook;
+  x.fillStyle = '#050302'; x.fillRect(0, 0, S, S);
+  const fl = .5 + .12 * Math.sin(TAU * u * 3) + .08 * Math.sin(TAU * u * 5); let g = x.createLinearGradient(0, S, 0, S * .25);
+  g.addColorStop(0, 'rgba(255,122,26,' + fl + ')'); g.addColorStop(.5, 'rgba(120,30,10,.25)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.fillRect(0, 0, S, S);
+  x.font = (S * .105) + 'px Anton, Impact, sans-serif'; x.textBaseline = 'middle'; x.textAlign = 'left';
+  const unit = hook + '    ', wd = x.measureText(unit).width, rows = 9;
+  for (let r = 0; r < rows; r++) { const y = (r + .5) * S / rows, dir = r % 2 ? 1 : -1, off = ((u * wd * dir) % wd + wd) % wd; x.fillStyle = 'rgba(234,223,196,' + (.07 + .05 * Math.sin(TAU * (u * 2 + r * .13))) + ')'; for (let xx = -off - wd; xx < S + wd; xx += wd) x.fillText(unit, xx, y); }
+  const words = hook.split(' '), half = Math.ceil(words.length / 2), lines = words.length > 3 ? [words.slice(0, half).join(' '), words.slice(half).join(' ')] : [hook];
+  const fs = S * (lines.length > 1 ? .15 : .17), sc = 1 + .05 * Math.sin(TAU * u * 2), dx = 7 * Math.sin(TAU * u * 3);
+  x.textAlign = 'center'; x.save(); x.translate(S / 2, S / 2); x.scale(sc, sc); x.font = fs + 'px Anton, Impact, sans-serif';
+  lines.forEach((ln, i) => { const y = (i - (lines.length - 1) / 2) * fs * 1.05; x.fillStyle = '#7ff6ff'; x.fillText(ln, dx, y); x.fillStyle = '#7a140b'; x.fillText(ln, -dx, y); x.fillStyle = '#eadfc4'; x.fillText(ln, 0, y); });
+  x.restore();
+  const stripes = (y) => { x.save(); x.beginPath(); x.rect(0, y, S, S * .04); x.clip(); x.fillStyle = '#ffc21a'; x.fillRect(0, y, S, S * .04); x.fillStyle = '#14100d'; const o = u * 96; for (let k = -2; k < S / 48 + 2; k++) { x.beginPath(); x.moveTo(k * 48 + o, y); x.lineTo(k * 48 + 24 + o, y); x.lineTo(k * 48 + 24 + o - S * .04, y + S * .04); x.lineTo(k * 48 + o - S * .04, y + S * .04); x.fill(); } x.restore(); };
+  stripes(0); stripes(S - S * .04);
+  x.font = (S * .034) + 'px "Special Elite", monospace'; x.textAlign = 'left'; x.fillStyle = 'rgba(234,223,196,.8)'; x.fillText(pad2(t.n) + '  ' + t.title.toUpperCase(), S * .04, S * .93);
+}
+function buildLab() {
+  const s = $('#labSel'); T.forEach((t, i) => { const o = el('option', null, pad2(t.n) + '  ' + t.hook); o.value = String(i); s.append(o); });
+  s.addEventListener('change', () => { lab.idx = +s.value; lab.t0 = performance.now(); });
+  $('#labRec').addEventListener('click', () => {
+    const st = $('#labStat');
+    if (!window.MediaRecorder || !lab.c.captureStream) { st.textContent = 'This browser cannot record. Open the page in Chrome.'; return; }
+    let rec; const mime = ['video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm'].find(m => MediaRecorder.isTypeSupported(m));
+    try { rec = new MediaRecorder(lab.c.captureStream(30), mime ? { mimeType: mime, videoBitsPerSecond: 6e6 } : {}); } catch (e) { st.textContent = 'Recording failed to start.'; return; }
+    const chunks = []; rec.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+    rec.onstop = () => { const url = URL.createObjectURL(new Blob(chunks, { type: rec.mimeType || 'video/webm' })); const v = $('#labOut'); v.src = url; v.hidden = false; v.play().catch(() => {}); const a = $('#labDl'); a.href = url; a.download = 'loop-' + pad2(T[lab.idx].n) + '.webm'; a.hidden = false; st.textContent = 'Done. Press and hold the video to save it, or use Save loop.'; };
+    lab.t0 = performance.now(); rec.start(); st.textContent = 'Recording 4 seconds...'; setTimeout(() => { if (rec.state !== 'inactive') rec.stop(); }, 4100);
+  });
+}
+
+/* ------------------------------------------------------------------ boot */
+function buildTails() { const g = $('#tails'); let s = ''; for (let i = 0; i < 9; i++) { const o = (i - 4); s += '<path d="M' + (45 + o * 2.6) + ' 32 Q' + (45 + o * 4.2) + ' 80 ' + (45 + o * 5.4) + ' ' + (118 + (i % 3) * 8) + '"/>'; } g.innerHTML = s; }
+buildTails(); buildTach(); renderManifest(); buildDispatch(); buildLab(); W.init();
+loadTrack(0, false); probe();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => drawPoster(T[ST.i]));
+window.__rig = { ST, T, ALBUM, loadTrack, play, pause, seek, W, mapFiles, setTake, pickTrack, audioSrc, au };
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
